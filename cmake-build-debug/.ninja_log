@@ -1,0 +1,5 @@
+# ninja log v5
+1	253	7611842631988160	build.ninja	b394550765d30ddc
+4	1014	7611831571854072	CMakeFiles/tower_defense.dir/main.cpp.obj	d0cdf98bf13387a4
+3	480	7611841594308154	tower_defense.exe	78849f0bf5db5f16
+4	502	7611842642812253	tower_defense.exe	8726fee3d1bde8e7
