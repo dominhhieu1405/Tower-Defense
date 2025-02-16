@@ -1,3 +1,4 @@
 C:/Users/ADMIN/CLionProjects/tower-defense/cmake-build-debug/CMakeFiles/tower_defense.dir
+C:/Users/ADMIN/CLionProjects/tower-defense/cmake-build-debug/CMakeFiles/copy_resources.dir
 C:/Users/ADMIN/CLionProjects/tower-defense/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/ADMIN/CLionProjects/tower-defense/cmake-build-debug/CMakeFiles/rebuild_cache.dir

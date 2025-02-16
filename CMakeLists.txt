@@ -22,7 +22,6 @@ include_directories(
         ${SDL2_TTF_DIR}/include
         ${SDL2_IMAGE_DIR}/include
 )
-
 add_executable(tower_defense main.cpp)
 
 # Liên kết thư viện
@@ -35,8 +34,9 @@ target_link_libraries(tower_defense
         )
 set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
 
-add_custom_command(TARGET tower_defense POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        ${CMAKE_SOURCE_DIR}/font.ttf
-        ${CMAKE_BINARY_DIR}/font.ttf
-        )
+add_custom_target(copy_resources ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${PROJECT_SOURCE_DIR}/assets
+        ${PROJECT_BINARY_DIR}/assets
+        COMMENT "Copying resources into binary directory")
+add_dependencies(tower_defense copy_resources)

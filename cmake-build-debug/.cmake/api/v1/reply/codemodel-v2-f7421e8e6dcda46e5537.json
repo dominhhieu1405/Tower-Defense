@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "tower_defense",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "copy_resources::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-copy_resources-Debug-3850d2d8907cb4e769bf.json",
+					"name" : "copy_resources",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "tower_defense::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-tower_defense-Debug-e6ab81df234f2c3e21b1.json",
+					"jsonFile" : "target-tower_defense-Debug-39461154e95bd4023381.json",
 					"name" : "tower_defense",
 					"projectIndex" : 0
 				}

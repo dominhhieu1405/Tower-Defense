@@ -15,6 +15,7 @@
 		[
 			"add_executable",
 			"target_link_libraries",
+			"add_dependencies",
 			"include_directories"
 		],
 		"files" : 
@@ -29,17 +30,23 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 26,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 29,
+				"line" : 28,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
+				"file" : 0,
+				"line" : 42,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
 				"file" : 0,
 				"line" : 19,
 				"parent" : 0
@@ -58,19 +65,19 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "C:/Users/ADMIN/CLionProjects/tower-defense/SDL2/SDL2-2.32.0/include"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "C:/Users/ADMIN/CLionProjects/tower-defense/SDL2/SDL2_mixer-2.8.1/include"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "C:/Users/ADMIN/CLionProjects/tower-defense/SDL2/SDL2_ttf-2.24.0/include"
 				},
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "C:/Users/ADMIN/CLionProjects/tower-defense/SDL2/SDL2_image-2.8.5/include"
 				}
 			],
@@ -87,6 +94,13 @@
 			[
 				0
 			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "copy_resources::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "tower_defense::@6890427a1f51a3e7e1df",
