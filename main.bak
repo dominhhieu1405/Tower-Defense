@@ -1,0 +1,183 @@
+#define SDL_MAIN_HANDLED  // Bỏ qua hàm main mặc định của SDL để tránh lỗi khi biên dịch trên một số nền tảng.
+
+#include <SDL2/SDL.h>      // Thư viện chính của SDL.
+#include <SDL2/SDL_image.h> // Hỗ trợ xử lý hình ảnh.
+#include <SDL2/SDL_ttf.h>   // Hỗ trợ xử lý font chữ.
+#include <SDL2/SDL_mixer.h> // Hỗ trợ âm thanh.
+#include <iostream>         // Nhập xuất dữ liệu chuẩn (std::cout, std::cerr).
+#include <vector>           // Sử dụng std::vector để lưu danh sách vật phẩm rơi.
+#include <ctime>            // Dùng để khởi tạo số ngẫu nhiên với time(0).
+#include <algorithm>        // Dùng std::remove_if để xóa vật phẩm khi rơi xuống hoặc bị bắt.
+#include <string>           // Hỗ trợ xử lý chuỗi (std::string).
+
+// Kích thước cửa sổ game
+const int SCREEN_WIDTH = 800;
+const int SCREEN_HEIGHT = 450;
+
+// Kích thước thanh điều khiển (người chơi)
+const int PLAYER_WIDTH = 100;
+const int PLAYER_HEIGHT = 20;
+
+// Kích thước vật phẩm rơi xuống
+const int ITEM_WIDTH = 30;
+const int ITEM_HEIGHT = 30;
+const int ITEM_SPEED = 1;  // Tốc độ rơi của vật phẩm
+
+// Con trỏ cửa sổ và renderer của SDL
+SDL_Window* window = nullptr;
+SDL_Renderer* renderer = nullptr;
+TTF_Font* font = nullptr; // Font chữ để hiển thị điểm số
+SDL_Texture* backgroundTexture = nullptr;
+
+
+
+// Cấu trúc dữ liệu cho vật phẩm rơi
+struct Item {
+    int x, y; // Tọa độ của vật phẩm
+};
+
+// Hàm khởi tạo SDL
+bool initSDL() {
+    if (SDL_Init(SDL_INIT_VIDEO) < 0) { // Khởi tạo SDL
+        std::cerr << "SDL could not initialize! SDL_Error: " << SDL_GetError() << std::endl;
+        return false;
+    }
+    if (TTF_Init() == -1) { // Khởi tạo thư viện xử lý font chữ
+        std::cerr << "TTF could not initialize! TTF_Error: " << TTF_GetError() << std::endl;
+        return false;
+    }
+    // Tạo cửa sổ game
+    window = SDL_CreateWindow("Hứng vật phẩm", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    if (!window) {
+        std::cerr << "Window could not be created! SDL_Error: " << SDL_GetError() << std::endl;
+        return false;
+    }
+    // Tạo renderer để vẽ
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    if (!renderer) {
+        std::cerr << "Renderer could not be created! SDL_Error: " << SDL_GetError() << std::endl;
+        return false;
+    }
+    // Load font từ file (cần sẵn file font.ttf trong thư mục assets/fonts/)
+    font = TTF_OpenFont("./assets/fonts/font.ttf", 24);
+    if (!font) {
+        std::cerr << "Failed to load font! SDL_ttf Error: " << TTF_GetError() << std::endl;
+        return false;
+    }
+
+    SDL_Surface* loadedSurface = IMG_Load("./assets/images/Cloud-2.png");
+    if (!loadedSurface) {
+        std::cerr << "Failed to load image! SDL_image error" << IMG_GetError() << std::endl;
+        return false;
+    }
+    backgroundTexture = SDL_CreateTextureFromSurface(renderer, loadedSurface);
+    SDL_FreeSurface(loadedSurface);
+
+    if (!backgroundTexture) {
+        std::cerr << "Failed to create texture from background image! SDL_Error: " << SDL_GetError() << std::endl;
+        return false;
+    }
+
+    return true;
+}
+
+// Hàm giải phóng tài nguyên SDL
+void closeSDL() {
+    TTF_CloseFont(font); // Giải phóng font
+    SDL_DestroyRenderer(renderer); // Hủy renderer
+    SDL_DestroyWindow(window); // Hủy cửa sổ
+    TTF_Quit(); // Thoát thư viện TTF
+    SDL_Quit(); // Thoát SDL
+}
+
+// Hàm hiển thị điểm số lên màn hình
+void renderText(const std::string& text, int x, int y) {
+    SDL_Color textColor = {255, 255, 255, 255}; // Màu trắng
+    SDL_Surface* textSurface = TTF_RenderText_Solid(font, text.c_str(), textColor); // Tạo surface chứa chữ
+    SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface); // Chuyển thành texture
+    SDL_Rect renderQuad = {x, y, textSurface->w, textSurface->h}; // Vị trí vẽ chữ
+    SDL_RenderCopy(renderer, textTexture, nullptr, &renderQuad); // Vẽ chữ lên màn hình
+    SDL_FreeSurface(textSurface); // Giải phóng surface
+    SDL_DestroyTexture(textTexture); // Giải phóng texture
+}
+
+// Hàm chính
+int main(int argc, char* args[]) {
+    if (!initSDL()) return -1; // Khởi tạo SDL, nếu lỗi thì thoát chương trình
+
+    // Tọa độ ban đầu của thanh điều khiển
+    int playerX = (SCREEN_WIDTH - PLAYER_WIDTH) / 2;
+    int playerY = SCREEN_HEIGHT - PLAYER_HEIGHT - 10;
+
+    std::vector<Item> items; // Danh sách vật phẩm
+    int score = 0; // Điểm số của người chơi
+    bool quit = false; // Biến kiểm tra thoát game
+    SDL_Event e; // Biến sự kiện SDL
+
+    srand(static_cast<unsigned>(time(0))); // Khởi tạo seed ngẫu nhiên
+
+    while (!quit) { // Vòng lặp game
+        while (SDL_PollEvent(&e) != 0) { // Xử lý sự kiện người chơi
+            if (e.type == SDL_QUIT) { // Nếu người chơi nhấn nút tắt cửa sổ
+                quit = true;
+            } else if (e.type == SDL_KEYDOWN) { // Nếu có phím được nhấn
+                if (e.key.keysym.sym == SDLK_LEFT && playerX > 0) { // Di chuyển trái
+                    playerX -= 20;
+                } else if (e.key.keysym.sym == SDLK_RIGHT && playerX < SCREEN_WIDTH - PLAYER_WIDTH) { // Di chuyển phải
+                    playerX += 20;
+                } else if (e.key.keysym.sym == SDLK_UP) {
+                    playerY -= 20;
+                } else if (e.key.keysym.sym == SDLK_DOWN) {
+                    playerY += 20;
+                }
+            }
+        }
+
+        // Ngẫu nhiên tạo vật phẩm rơi
+        if (rand() % 50 == 0) {
+            items.push_back({rand() % (SCREEN_WIDTH - ITEM_WIDTH), 0});
+        }
+
+        // Cập nhật vị trí của vật phẩm
+        for (auto& item : items) {
+            item.y += ITEM_SPEED;
+        }
+
+        // Xóa vật phẩm khi rơi xuống hoặc khi bị bắt
+        items.erase(std::remove_if(items.begin(), items.end(), [&](Item& item) {
+            if (item.y > SCREEN_HEIGHT) return true; // Nếu vật phẩm rơi quá màn hình thì xóa
+            if (item.y + ITEM_HEIGHT >= playerY && item.x + ITEM_WIDTH >= playerX && item.x <= playerX + PLAYER_WIDTH) {
+                score++; // Tăng điểm khi bắt được vật phẩm
+                return true;
+            }
+            return false;
+        }), items.end());
+
+        // Vẽ background
+        SDL_RenderCopy(renderer, backgroundTexture, nullptr, nullptr);
+
+
+        // Vẽ thanh điều khiển (người chơi)
+        SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+        SDL_Rect playerRect = {playerX, playerY, PLAYER_WIDTH, PLAYER_HEIGHT};
+        SDL_RenderFillRect(renderer, &playerRect);
+
+        // Vẽ các vật phẩm rơi
+        for (const auto& item : items) {
+            SDL_Rect itemRect = {item.x, item.y, ITEM_WIDTH, ITEM_HEIGHT};
+            SDL_RenderFillRect(renderer, &itemRect);
+        }
+
+        // Hiển thị điểm số
+        renderText("Score: " + std::to_string(score), 10, 10);
+
+        // Cập nhật frame vẽ
+        SDL_RenderPresent(renderer);
+
+        // Đợi 16ms để giữ FPS khoảng 60
+        SDL_Delay(16);
+    }
+
+    closeSDL(); // Giải phóng tài nguyên khi thoát game
+    return 0;
+}

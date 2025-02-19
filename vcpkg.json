@@ -1,0 +1,9 @@
+{
+  "name" : "tower-defense",
+  "version-string" : "1.0.0",
+  "builtin-baseline" : "0413db10ad778df118d55afc20c2da09fadee057",
+  "dependencies" : [ {
+    "name" : "nlohmann-json",
+    "version>=" : "3.11.3#1"
+  } ]
+}

@@ -24,6 +24,8 @@ include_directories(
 )
 add_executable(tower_defense main.cpp)
 
+find_package(nlohmann_json CONFIG REQUIRED)
+
 # Liên kết thư viện
 target_link_libraries(tower_defense
         ${SDL2_LIB}
@@ -31,8 +33,11 @@ target_link_libraries(tower_defense
         ${SDL2_MIXER_LIB}
         ${SDL2_TTF_LIB}
         ${SDL2_IMAGE_LIB}
+        nlohmann_json::nlohmann_json
         )
 set(CMAKE_EXE_LINKER_FLAGS "-static -static-libgcc -static-libstdc++")
+
+
 
 add_custom_target(copy_resources ALL
         COMMAND ${CMAKE_COMMAND} -E copy_directory
