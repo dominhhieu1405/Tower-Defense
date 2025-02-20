@@ -2,7 +2,8 @@
 #include <SDL2/SDL_mixer.h>
 #include <SDL2/SDL_ttf.h>
 
-// Định nghĩa khoảng cách giữa các nút
+// Định nghĩa khoảng cách giữa các nút.
+
 #define BUTTON_SPACING 20
 
 Menu::Menu(SDL_Renderer* renderer, bool* isRunning) : renderer(renderer), backgroundTexture(nullptr), logoTexture(nullptr), buttonTexture(nullptr), font(nullptr), bgm(nullptr), isRunning(isRunning) {
