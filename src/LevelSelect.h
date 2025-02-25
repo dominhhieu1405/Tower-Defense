@@ -14,6 +14,7 @@ struct Level {
     std::string name;
     bool unlocked;
     int score;
+    bool played;
 };
 
 class LevelSelect {
@@ -26,6 +27,7 @@ public:
     void handleEvents(SDL_Event& event);
 
     SDL_Rect backButton;
+    int hoveredButton = -1;
 private:
     SDL_Renderer* renderer;
     SDL_Texture* backgroundTexture;

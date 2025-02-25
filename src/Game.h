@@ -23,6 +23,7 @@ public:
     ~Game();
     Mix_Music* bgm;
     GameState currentState;
+    int selectedLevel = -1;
 
     bool init(const char* title, int width, int height);
 

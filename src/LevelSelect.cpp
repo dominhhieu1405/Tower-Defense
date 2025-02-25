@@ -59,7 +59,8 @@ void LevelSelect::loadLevels(const char* filename) {
                                  item["id"],
                                  item["name"],
                                  item["unlocked"],
-                                 item["score"]
+                                 item["score"],
+                                 item["played"]
                          });
     }
 }
@@ -76,20 +77,30 @@ void LevelSelect::render() {
         if (!level.unlocked) {
             SDL_SetTextureColorMod(buttonTexture, 100, 100, 100);  // Làm tối màu
         } else {
-            SDL_SetTextureColorMod(buttonTexture, 255, 255, 255);
+            if (hoveredButton == i) {
+                SDL_SetTextureColorMod(buttonTexture, 200, 200, 180);  // Làm sáng màu
+            } else {
+                SDL_SetTextureColorMod(buttonTexture, 255, 255, 255);
+            }
         }
 
-        SDL_RenderCopy(renderer, buttonTexture, NULL, &levelButtons[i]);
-        renderText(level.name.c_str(), levelButtons[i].x + BUTTON_WIDTH / 2, levelButtons[i].y + BUTTON_HEIGHT / 2 - 15);
 
-        if (level.unlocked) {
-            renderStars(level.score, levelButtons[i].x + 60, levelButtons[i].y + 50);
+        SDL_RenderCopy(renderer, buttonTexture, NULL, &levelButtons[i]);
+        if (level.unlocked && level.played) {
+            renderText(level.name.c_str(), levelButtons[i].x + BUTTON_WIDTH / 2, levelButtons[i].y + BUTTON_HEIGHT / 2 - 20);
+            renderStars(level.score, levelButtons[i].x + 60, levelButtons[i].y + 45);
+        } else {
+            renderText(level.name.c_str(), levelButtons[i].x + BUTTON_WIDTH / 2, levelButtons[i].y + BUTTON_HEIGHT / 2 - 5);
         }
     }
 
-    SDL_SetTextureColorMod(buttonTexture, 255, 255, 255);
+    if (hoveredButton == 99) {
+        SDL_SetTextureColorMod(buttonTexture, 200, 200, 180);  // Làm sáng màu
+    } else {
+        SDL_SetTextureColorMod(buttonTexture, 255, 255, 255);
+    }
     SDL_RenderCopy(renderer, buttonTexture, NULL, &backButton);
-    renderText("QUAY LẠI", backButton.x + BUTTON_WIDTH / 2, backButton.y + BUTTON_HEIGHT / 2);
+    renderText("QUAY LẠI", backButton.x + BUTTON_WIDTH / 2, backButton.y + BUTTON_HEIGHT / 2 - 5);
 
     SDL_RenderPresent(renderer);
 }
@@ -125,24 +136,34 @@ void LevelSelect::renderStars(int score, int x, int y) {
 
 
 void LevelSelect::handleEvents(SDL_Event& event) {
-    if (event.type == SDL_MOUSEBUTTONDOWN) {
+    if (event.type == SDL_MOUSEMOTION || event.type == SDL_MOUSEBUTTONDOWN) {
         int mouseX = event.button.x;
         int mouseY = event.button.y;
+        hoveredButton = -1;
 
         for (int i = 0; i < levels.size(); i++) {
             if (mouseX >= levelButtons[i].x && mouseX <= levelButtons[i].x + BUTTON_WIDTH &&
                 mouseY >= levelButtons[i].y && mouseY <= levelButtons[i].y + BUTTON_HEIGHT &&
                 levels[i].unlocked) {
-                SDL_Log("Clicked level %d", levels[i].id);
-                Mix_PlayChannel(-1, clickSound, 0);
+                hoveredButton = i;
+                if (event.type == SDL_MOUSEBUTTONDOWN) {
+                    SDL_Log("Clicked level %d", levels[i].id);
+                    Mix_PlayChannel(-1, clickSound, 0);
+                    game->selectedLevel = levels[i].id;
+                    game->currentState = PLAY;
+                }
             }
         }
 
         if (mouseX >= backButton.x && mouseX <= backButton.x + BUTTON_WIDTH &&
             mouseY >= backButton.y && mouseY <= backButton.y + BUTTON_HEIGHT) {
-            Mix_PlayChannel(-1, clickSound, 0);
-            SDL_Log("Returning to menu...");
-            game->currentState = MENU;
+            hoveredButton = 99;
+            if (event.type == SDL_MOUSEBUTTONDOWN) {
+                Mix_PlayChannel(-1, clickSound, 0);
+                SDL_Log("Returning to menu...");
+                game->currentState = MENU;
+            }
         }
     }
+
 }
