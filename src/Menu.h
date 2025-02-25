@@ -7,7 +7,6 @@
 #include <SDL2/SDL_mixer.h>
 #include "Game.h"
 
-
 class Game;
 class Menu {
 public:

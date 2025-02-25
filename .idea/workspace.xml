@@ -30,6 +30,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
@@ -146,7 +147,7 @@
       <workItem from="1740125919982" duration="4331000" />
       <workItem from="1740413961104" duration="1509000" />
       <workItem from="1740482244254" duration="8107000" />
-      <workItem from="1740496871313" duration="2847000" />
+      <workItem from="1740496871313" duration="3000000" />
     </task>
     <task id="LOCAL-00001" summary="19/02/2024">
       <option name="closed" value="true" />
@@ -196,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740500522837</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="25/02/2024">
+      <option name="closed" value="true" />
+      <created>1740500624861</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740500624861</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
