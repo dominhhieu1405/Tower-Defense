@@ -33,3 +33,12 @@
 813	2687	7621947582915334	CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj	619d6b293a842029
 821	5198	7621947582998276	CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj	29529734536fdd84
 5198	10368	7621947626770121	tower_defense.exe	d2a200493312c490
+31	789	7622033655156999	CMakeFiles/copy_resources	27b823147f19a6e9
+31	789	7622033655156999	C:/Users/ADMIN/CLionProjects/tower-defense/cmake-build-debug/CMakeFiles/copy_resources	27b823147f19a6e9
+845	2022	7622033663291529	CMakeFiles/tower_defense.dir/src/Play.cpp.obj	366245d3491a715
+853	2023	7622033663376633	CMakeFiles/tower_defense.dir/src/main.cpp.obj	18eb208a297cb699
+837	2026	7622033663215460	CMakeFiles/tower_defense.dir/src/Menu.cpp.obj	dc3c62d045e5cdf6
+790	2354	7622033662746516	CMakeFiles/tower_defense.dir/src/Game.cpp.obj	d0a812ed97024aa0
+819	2668	7622033663044042	CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj	619d6b293a842029
+828	5683	7622033663127295	CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj	29529734536fdd84
+5683	11844	7622033711678355	tower_defense.exe	d2a200493312c490
