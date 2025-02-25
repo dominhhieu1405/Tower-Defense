@@ -5,7 +5,9 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_mixer.h>
-#include "Menu.h"
+
+class Menu;
+class LevelSelect;
 
 enum GameState {
     MENU,
@@ -20,6 +22,7 @@ public:
     Game();
     ~Game();
     Mix_Music* bgm;
+    GameState currentState;
 
     bool init(const char* title, int width, int height);
 
@@ -32,10 +35,10 @@ public:
 private:
 
     Menu* menu;
+    LevelSelect* levelSelect;
     SDL_Window* window;
     SDL_Renderer* renderer = nullptr;
     bool isRunning;
-    GameState currentState;
 };
 
 #endif // GAME_H

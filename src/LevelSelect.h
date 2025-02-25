@@ -2,22 +2,48 @@
 #define LEVELSELECT_H
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
-#include "Game.h"
+#include <SDL2/SDL_mixer.h>
+#include <vector>
 #include <string>
+#include "Game.h"
+
+struct Level {
+    int id;
+    std::string name;
+    bool unlocked;
+    int score;
+};
 
 class LevelSelect {
 public:
-    LevelSelect(SDL_Renderer* renderer);
+    LevelSelect(SDL_Renderer* renderer, bool* isRunning, Game* game);
     ~LevelSelect();
 
-    void handleEvents(SDL_Event& event, GameState& currentState);
+    void loadLevels(const char* filename);
     void render();
+    void handleEvents(SDL_Event& event);
 
+    SDL_Rect backButton;
 private:
     SDL_Renderer* renderer;
+    SDL_Texture* backgroundTexture;
+    SDL_Texture* logoTexture;
+    SDL_Texture* buttonTexture;
+    SDL_Texture* starOnTexture;
+    SDL_Texture* starOffTexture;
     TTF_Font* font;
-    int selectedLevel;
+    Mix_Chunk* clickSound;
+
+    bool* isRunning;
+    Game* game; // Truy cập `currentState`
+    std::vector<Level> levels;
+
+    SDL_Rect levelButtons[9];
+
+    void renderText(const char* text, int x, int y);
+    void renderStars(int score, int x, int y);
 };
 
-#endif
+#endif // LEVELSELECT_H

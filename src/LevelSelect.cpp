@@ -1,56 +1,148 @@
 #include "LevelSelect.h"
-#include <SDL2/SDL_ttf.h>
+#include <fstream>
+#include <nlohmann/json.hpp>
 
-LevelSelect::LevelSelect(SDL_Renderer* renderer) : renderer(renderer), selectedLevel(0) {
-    font = TTF_OpenFont("assets/fonts/arial.ttf", 24);
-    if (!font) {
-        SDL_Log("Không thể tải font! Lỗi: %s", TTF_GetError());
+using json = nlohmann::json;
+
+#define BUTTON_WIDTH 200
+#define BUTTON_HEIGHT 80
+#define BUTTON_SPACING 20
+
+LevelSelect::LevelSelect(SDL_Renderer* renderer, bool* isRunning, Game* game)
+        : renderer(renderer), game(game), isRunning(isRunning), backgroundTexture(nullptr), logoTexture(nullptr),
+          buttonTexture(nullptr), starOnTexture(nullptr), starOffTexture(nullptr), font(nullptr), clickSound(nullptr) {
+
+    backgroundTexture = IMG_LoadTexture(renderer, "assets/images/background.png");
+    logoTexture = IMG_LoadTexture(renderer, "assets/images/logo.png");
+    buttonTexture = IMG_LoadTexture(renderer, "assets/images/button.png");
+    starOnTexture = IMG_LoadTexture(renderer, "assets/images/star-on.png");
+    starOffTexture = IMG_LoadTexture(renderer, "assets/images/star-off.png");
+    font = TTF_OpenFont("assets/fonts/wood.ttf", 32);
+    clickSound = Mix_LoadWAV("assets/audios/click.wav");
+
+    loadLevels("assets/data/levels.json");
+
+    int startX = (1200 - (3 * BUTTON_WIDTH + 2 * BUTTON_SPACING)) / 2;
+    int startY = 250 + 50;  // Dưới logo
+
+    for (int i = 0; i < 9; i++) {
+        int row = i / 3;
+        int col = i % 3;
+        levelButtons[i] = { startX + col * (BUTTON_WIDTH + BUTTON_SPACING), startY + row * (BUTTON_HEIGHT + BUTTON_SPACING), BUTTON_WIDTH, BUTTON_HEIGHT };
     }
+
+    backButton = { (1200 - BUTTON_WIDTH) / 2, startY + 3 * (BUTTON_HEIGHT + BUTTON_SPACING), BUTTON_WIDTH, BUTTON_HEIGHT };
 }
 
 LevelSelect::~LevelSelect() {
-    TTF_CloseFont(font);
+    SDL_DestroyTexture(backgroundTexture);
+    SDL_DestroyTexture(logoTexture);
+    SDL_DestroyTexture(buttonTexture);
+    SDL_DestroyTexture(starOnTexture);
+    SDL_DestroyTexture(starOffTexture);
+    if (font) TTF_CloseFont(font);
+    Mix_FreeChunk(clickSound);
 }
 
-void LevelSelect::handleEvents(SDL_Event& event, GameState& currentState) {
-    if (event.type == SDL_KEYDOWN) {
-        switch (event.key.keysym.sym) {
-            case SDLK_LEFT:
-                selectedLevel = (selectedLevel - 1 + 5) % 5;
-                break;
-            case SDLK_RIGHT:
-                selectedLevel = (selectedLevel + 1) % 5;
-                break;
-            case SDLK_RETURN:
-                currentState = PLAY;
-                break;
-            case SDLK_ESCAPE:
-                currentState = MENU;
-                break;
-        }
+void LevelSelect::loadLevels(const char* filename) {
+    std::ifstream file(filename);
+    if (!file) {
+        SDL_Log("Failed to load levels data!");
+        return;
+    }
+
+    json levelData;
+    file >> levelData;
+
+    for (const auto& item : levelData) {
+        levels.push_back({
+                                 item["id"],
+                                 item["name"],
+                                 item["unlocked"],
+                                 item["score"]
+                         });
     }
 }
 
 void LevelSelect::render() {
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-    SDL_RenderClear(renderer);
+    SDL_RenderCopy(renderer, backgroundTexture, NULL, NULL);
 
-    SDL_Color white = {255, 255, 255, 255};
-    SDL_Color yellow = {255, 255, 0, 255};
+    SDL_Rect logoRect = { (1200 - 500) / 2, 35, 500, 250 };
+    SDL_RenderCopy(renderer, logoTexture, NULL, &logoRect);
 
-    for (int i = 0; i < 5; i++) {
-        SDL_Color color = (i == selectedLevel) ? yellow : white;
-        std::string levelText = "Level " + std::to_string(i + 1);
+    for (int i = 0; i < levels.size(); i++) {
+        Level& level = levels[i];
 
-        SDL_Surface* textSurface = TTF_RenderUTF8_Solid(font, levelText.c_str(), color);
-        SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
-        SDL_Rect textRect = {200 + i * 100, 250, textSurface->w, textSurface->h};
+        if (!level.unlocked) {
+            SDL_SetTextureColorMod(buttonTexture, 100, 100, 100);  // Làm tối màu
+        } else {
+            SDL_SetTextureColorMod(buttonTexture, 255, 255, 255);
+        }
 
-        SDL_RenderCopy(renderer, textTexture, NULL, &textRect);
+        SDL_RenderCopy(renderer, buttonTexture, NULL, &levelButtons[i]);
+        renderText(level.name.c_str(), levelButtons[i].x + BUTTON_WIDTH / 2, levelButtons[i].y + BUTTON_HEIGHT / 2 - 15);
 
-        SDL_FreeSurface(textSurface);
-        SDL_DestroyTexture(textTexture);
+        if (level.unlocked) {
+            renderStars(level.score, levelButtons[i].x + 60, levelButtons[i].y + 50);
+        }
     }
 
+    SDL_SetTextureColorMod(buttonTexture, 255, 255, 255);
+    SDL_RenderCopy(renderer, buttonTexture, NULL, &backButton);
+    renderText("QUAY LẠI", backButton.x + BUTTON_WIDTH / 2, backButton.y + BUTTON_HEIGHT / 2);
+
     SDL_RenderPresent(renderer);
+}
+
+void LevelSelect::renderText(const char* text, int x, int y) {
+    if (!font) return;
+
+    SDL_Color textColor = { 255, 255, 255, 255 };
+    SDL_Surface* textSurface = TTF_RenderUTF8_Blended(font, text, textColor);
+    if (!textSurface) return;
+
+    SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+    SDL_Rect textRect = { x - textSurface->w / 2, y - textSurface->h / 2, textSurface->w, textSurface->h };
+
+    SDL_RenderCopy(renderer, textTexture, NULL, &textRect);
+    SDL_FreeSurface(textSurface);
+    SDL_DestroyTexture(textTexture);
+}
+
+void LevelSelect::renderStars(int score, int x, int y) {
+    SDL_Rect starRect = { x, y, 24, 24 };
+
+    for (int i = 0; i < 3; i++) {
+        if (i < score) {
+            SDL_RenderCopy(renderer, starOnTexture, NULL, &starRect);
+        } else {
+            SDL_RenderCopy(renderer, starOffTexture, NULL, &starRect);
+        }
+        starRect.x += 30;
+    }
+}
+
+
+
+void LevelSelect::handleEvents(SDL_Event& event) {
+    if (event.type == SDL_MOUSEBUTTONDOWN) {
+        int mouseX = event.button.x;
+        int mouseY = event.button.y;
+
+        for (int i = 0; i < levels.size(); i++) {
+            if (mouseX >= levelButtons[i].x && mouseX <= levelButtons[i].x + BUTTON_WIDTH &&
+                mouseY >= levelButtons[i].y && mouseY <= levelButtons[i].y + BUTTON_HEIGHT &&
+                levels[i].unlocked) {
+                SDL_Log("Clicked level %d", levels[i].id);
+                Mix_PlayChannel(-1, clickSound, 0);
+            }
+        }
+
+        if (mouseX >= backButton.x && mouseX <= backButton.x + BUTTON_WIDTH &&
+            mouseY >= backButton.y && mouseY <= backButton.y + BUTTON_HEIGHT) {
+            Mix_PlayChannel(-1, clickSound, 0);
+            SDL_Log("Returning to menu...");
+            game->currentState = MENU;
+        }
+    }
 }

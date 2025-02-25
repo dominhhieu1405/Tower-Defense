@@ -39,6 +39,7 @@ add_executable(tower_defense ${SOURCES})
 # Thêm thư viện JSON
 find_package(nlohmann_json CONFIG REQUIRED)
 
+
 # Liên kết thư viện SDL2 và JSON
 target_link_libraries(tower_defense
         ${SDL2_LIB}

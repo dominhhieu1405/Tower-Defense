@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Level 1",
+    "unlocked": true,
+    "completed": true,
+    "score": 3
+  },
+  {
+    "id": 2,
+    "name": "Level 2",
+    "unlocked": true,
+    "completed": true,
+    "score": 2
+  },
+  {
+    "id": 3,
+    "name": "Level 3",
+    "unlocked": true,
+    "completed": false,
+    "score": 0
+  },
+  {
+    "id": 4,
+    "name": "Level 4",
+    "unlocked": false,
+    "completed": false,
+    "score": 0
+  },
+  {
+    "id": 5,
+    "name": "Level 5",
+    "unlocked": false,
+    "completed": false,
+    "score": 0
+  },
+  {
+    "id": 6,
+    "name": "Level 6",
+    "unlocked": false,
+    "completed": false,
+    "score": 0
+  },
+  {
+    "id": 7,
+    "name": "Level 7",
+    "unlocked": false,
+    "completed": false,
+    "score": 0
+  },
+  {
+    "id": 8,
+    "name": "Level 8",
+    "unlocked": false,
+    "completed": false,
+    "score": 0
+  },
+  {
+    "id": 9,
+    "name": "Level 9",
+    "unlocked": false,
+    "completed": false,
+    "score": 0
+  }
+]

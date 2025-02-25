@@ -6,7 +6,7 @@
 
 #define BUTTON_SPACING 20
 
-Menu::Menu(SDL_Renderer* renderer, bool* isRunning) : renderer(renderer), backgroundTexture(nullptr), logoTexture(nullptr), buttonTexture(nullptr), font(nullptr), bgm(nullptr), isRunning(isRunning) {
+Menu::Menu(SDL_Renderer* renderer, bool* isRunning, Game* game) : renderer(renderer), game(game), backgroundTexture(nullptr), logoTexture(nullptr), buttonTexture(nullptr), font(nullptr), bgm(nullptr), isRunning(isRunning) {
     // Load hình nền
     backgroundTexture = IMG_LoadTexture(renderer, "assets/images/background.png");
     if (!backgroundTexture) {
@@ -154,6 +154,9 @@ void Menu::handleEvents(SDL_Event& event) {
                     // Xử lý click vào từng nút nếu cần
                     if (clickSound) {
                         Mix_PlayChannel(-1, clickSound, 0);
+                    }
+                    if (i == 1){
+                        game->currentState = LEVEL_SELECT;
                     }
                     if (i == 3) {
                         // Thoát game

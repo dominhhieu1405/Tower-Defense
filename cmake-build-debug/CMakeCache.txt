@@ -245,6 +245,9 @@ CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=C:\Users\ADMIN\.vcpkg-clion\vcpkg\scripts\bui
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//The directory containing a CMake configuration file for SDL2.
+SDL2_DIR:PATH=SDL2_DIR-NOTFOUND
+
 //Path to a library.
 SDL2_IMAGE_LIB:FILEPATH=C:/Users/ADMIN/CLionProjects/tower-defense/SDL2/SDL2_image-2.8.5/lib/libSDL2_image.dll.a
 

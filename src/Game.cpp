@@ -59,7 +59,8 @@ bool Game::init(const char* title, int width, int height) {
     }
 
     // Khởi tạo menu sau khi renderer đã có
-    menu = new Menu(renderer, &isRunning);
+    menu = new Menu(renderer, &isRunning, this);
+    levelSelect = new LevelSelect(renderer, &isRunning, this);
     return true;
 }
 
@@ -73,7 +74,12 @@ void Game::run() {
                 isRunning = false;
             }
 
-            menu->handleEvents(event);  // Gọi hàm xử lý sự kiện cho menu
+            handleEvents();
+            if (currentState == MENU) {
+                menu->handleEvents(event);
+            } else if (currentState == LEVEL_SELECT) {
+                levelSelect->handleEvents(event);
+            }
             render();
         }
 
@@ -93,21 +99,29 @@ void Game::handleEvents() {
             int x = event.button.x;
             int y = event.button.y;
 
-            // Xử lý click chuột trên menu
             if (currentState == MENU) {
-//                if (/* Kiểm tra nếu bấm vào nút "Chơi tiếp" */) {
-//                    currentState = PLAY;
-//                } else if (/* Kiểm tra nếu bấm vào "Bản đồ" */) {
-//                    currentState = LEVEL_SELECT;
-//                } else if (/* Kiểm tra nếu bấm vào "Bảng xếp hạng" */) {
-//                    currentState = LEADERBOARD;
-//                } else if (/* Kiểm tra nếu bấm vào "Thoát" */) {
-//                    isRunning = false;
-//                }
+                for (int i = 0; i < 4; i++) {
+                    if (x >= menu->buttons[i].x && x <= menu->buttons[i].x + menu->buttons[i].w &&
+                        y >= menu->buttons[i].y && y <= menu->buttons[i].y + menu->buttons[i].h) {
+
+                        if (i == 1) {  // Nếu nhấn vào "Bản đồ"
+                            SDL_Log("Switching to Level Select...");
+                            levelSelect->loadLevels("assets/data/levels.json"); // Load dữ liệu trước khi chuyển
+                            currentState = LEVEL_SELECT;
+                        }
+                    }
+                }
+            } else if (currentState == LEVEL_SELECT) {
+                if (x >= levelSelect->backButton.x && x <= levelSelect->backButton.x + 200 &&
+                    y >= levelSelect->backButton.y && y <= levelSelect->backButton.y + 80) {
+                    SDL_Log("Returning to menu...");
+                    currentState = MENU;
+                }
             }
         }
     }
 }
+
 
 void Game::update() {
     // Chưa cần xử lý gì nhiều, chỉ chuyển màn
@@ -120,8 +134,8 @@ void Game::render() {
         //Menu menu(renderer);
         menu->render();
     } else if (currentState == LEVEL_SELECT) {
-        LevelSelect levelSelect(renderer);
-        levelSelect.render();
+
+        levelSelect->render();
     } else if (currentState == PLAY) {
         Play play(renderer);
         play.render();
