@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="tower_defense" targetName="tower_defense" />
+      <config projectName="tower_defense" targetName="copy_resources" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-DCMAKE_TOOLCHAIN_FILE=C:\Users\ADMIN\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6b91ede2-0053-4bac-bd32-ab27ed627ce2" name="Changes" comment="25/02/2024" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dominhhieu1405&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://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@github.com/dominhhieu1405/Tower-Defense.git&quot;,
+    &quot;accountId&quot;: &quot;69da8085-de5f-4a46-8050-81f8f372dc70&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2023" />
+    <option name="minorVersion" value="1.3" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2syMKgAYXawiGUZJnv4iX6U8ZMJ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "CMake Application.tower_defense.executor": "Run",
+    "CMake Debug.tower_defense.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/ADMIN/CLionProjects/tower-defense/assets/images",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CMakeSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\CLionProjects\tower-defense\assets\images" />
+      <recent name="C:\Users\ADMIN\CLionProjects\tower-defense\cmake-build-debug" />
+      <recent name="C:\Users\ADMIN\CLionProjects\tower-defense" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.tower_defense">
+    <configuration name="copy_resources" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tower_defense" TARGET_NAME="copy_resources" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tower_defense" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="true" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tower_defense" TARGET_NAME="tower_defense" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tower_defense" RUN_TARGET_NAME="tower_defense">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.copy_resources" />
+      <item itemvalue="CMake Application.tower_defense" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b91ede2-0053-4bac-bd32-ab27ed627ce2" name="Changes" comment="" />
+      <created>1739423298562</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739423298562</updated>
+      <workItem from="1739423299851" duration="1469000" />
+      <workItem from="1739478640863" duration="2464000" />
+      <workItem from="1739530098405" duration="32000" />
+      <workItem from="1739549807636" duration="698000" />
+      <workItem from="1739717884045" duration="6207000" />
+      <workItem from="1739946796506" duration="297000" />
+      <workItem from="1739947111965" duration="218000" />
+      <workItem from="1739947347620" duration="1476000" />
+      <workItem from="1739949888526" duration="594000" />
+      <workItem from="1739957530677" duration="3387000" />
+      <workItem from="1739967383155" duration="650000" />
+      <workItem from="1739969984087" duration="64000" />
+      <workItem from="1739971338509" duration="14049000" />
+      <workItem from="1740019913686" duration="1510000" />
+      <workItem from="1740022762272" duration="951000" />
+      <workItem from="1740025571906" duration="839000" />
+      <workItem from="1740026431592" duration="1134000" />
+      <workItem from="1740030173123" duration="143000" />
+      <workItem from="1740060683529" duration="895000" />
+      <workItem from="1740125919982" duration="4331000" />
+      <workItem from="1740413961104" duration="1509000" />
+      <workItem from="1740482244254" duration="8107000" />
+      <workItem from="1740496871313" duration="2847000" />
+    </task>
+    <task id="LOCAL-00001" summary="19/02/2024">
+      <option name="closed" value="true" />
+      <created>1739975016005</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739975016005</updated>
+    </task>
+    <task id="LOCAL-00002" summary="19/02/2024">
+      <option name="closed" value="true" />
+      <created>1740022930767</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740022930767</updated>
+    </task>
+    <task id="LOCAL-00003" summary="19/02/2024">
+      <option name="closed" value="true" />
+      <created>1740025992391</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740025992391</updated>
+    </task>
+    <task id="LOCAL-00004" summary="25/02/2024">
+      <option name="closed" value="true" />
+      <created>1740486870061</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740486870061</updated>
+    </task>
+    <task id="LOCAL-00005" summary="25/02/2024">
+      <option name="closed" value="true" />
+      <created>1740497290301</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740497290301</updated>
+    </task>
+    <task id="LOCAL-00006" summary="25/02/2024">
+      <option name="closed" value="true" />
+      <created>1740500522837</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740500522837</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="19/02/2024" />
+    <MESSAGE value="25/02/2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="25/02/2024" />
+  </component>
+</project>
