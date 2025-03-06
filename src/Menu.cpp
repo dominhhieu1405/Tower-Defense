@@ -39,7 +39,7 @@ Menu::Menu(SDL_Renderer* renderer, bool* isRunning, Game* game) : renderer(rende
     // Gán giá trị chính xác cho `buttons[]`
     for (int i = 0; i < 4; i++) {
         buttons[i] = {
-                (1200 - buttonWidth) / 2,
+                (1280 - buttonWidth) / 2,
                 buttonStartY + i * (buttonHeight + buttonSpacing),
                 buttonWidth,
                 buttonHeight
@@ -76,7 +76,7 @@ void Menu::render() {
     const int logoWidth = 500;
     const int logoHeight = 250;
     SDL_Rect logoRect = {
-            (1200 - logoWidth) / 2,  // Giữa theo chiều ngang
+            (1280 - logoWidth) / 2,  // Giữa theo chiều ngang
             35,  // Cách mép trên 35px
             logoWidth,
             logoHeight

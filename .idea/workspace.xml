@@ -24,7 +24,43 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b91ede2-0053-4bac-bd32-ab27ed627ce2" name="Changes" comment="25/02/2024" />
+    <list default="true" id="6b91ede2-0053-4bac-bd32-ab27ed627ce2" name="Changes" comment="25/02/2024">
+      <change afterPath="$PROJECT_DIR$/assets/data/towers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.bak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.bak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Struct.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tower.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TowerManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TowerManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/maps/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/maps/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Game.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Menu.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Menu.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Play.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Play.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.png" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level 03 - Weapon.aseprite" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/maps/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/maps/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tower_defense.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tower_defense.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LevelSelect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/LevelSelect.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LevelSelect.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/LevelSelect.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Play.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Play.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Play.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Play.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,36 +105,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "CMake Application.tower_defense.executor": "Run",
-    "CMake Debug.tower_defense.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/ADMIN/CLionProjects/tower-defense/assets/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CMakeSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;CMake Application.tower_defense.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.tower_defense.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/CLionProjects/tower-defense/assets/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\CLionProjects\tower-defense\assets\images" />
       <recent name="C:\Users\ADMIN\CLionProjects\tower-defense\cmake-build-debug" />
       <recent name="C:\Users\ADMIN\CLionProjects\tower-defense" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\CLionProjects\tower-defense\src" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.tower_defense">
@@ -147,7 +186,15 @@
       <workItem from="1740125919982" duration="4331000" />
       <workItem from="1740413961104" duration="1509000" />
       <workItem from="1740482244254" duration="8107000" />
-      <workItem from="1740496871313" duration="3000000" />
+      <workItem from="1740496871313" duration="9003000" />
+      <workItem from="1740549879451" duration="3600000" />
+      <workItem from="1740555297760" duration="394000" />
+      <workItem from="1740628729380" duration="26000" />
+      <workItem from="1740629235489" duration="1024000" />
+      <workItem from="1741154139915" duration="3269000" />
+      <workItem from="1741159299181" duration="1282000" />
+      <workItem from="1741237345782" duration="10000" />
+      <workItem from="1741292835300" duration="2643000" />
     </task>
     <task id="LOCAL-00001" summary="19/02/2024">
       <option name="closed" value="true" />
@@ -205,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740500624861</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="25/02/2024">
+      <option name="closed" value="true" />
+      <created>1740500691866</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740500691866</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

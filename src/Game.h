@@ -5,9 +5,13 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_mixer.h>
+#include "TowerManager.h"
+
 
 class Menu;
 class LevelSelect;
+class Play;
+class Leaderboard;
 
 enum GameState {
     MENU,
@@ -25,6 +29,8 @@ public:
     GameState currentState;
     int selectedLevel = -1;
 
+    TowerManager towerManager;
+
     bool init(const char* title, int width, int height);
 
     void run();
@@ -37,6 +43,9 @@ private:
 
     Menu* menu;
     LevelSelect* levelSelect;
+    Play* play = nullptr;
+    Leaderboard* leaderboard;
+
     SDL_Window* window;
     SDL_Renderer* renderer = nullptr;
     bool isRunning;

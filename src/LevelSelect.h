@@ -8,14 +8,7 @@
 #include <vector>
 #include <string>
 #include "Game.h"
-
-struct Level {
-    int id;
-    std::string name;
-    bool unlocked;
-    int score;
-    bool played;
-};
+#include "Struct.h"
 
 class LevelSelect {
 public:

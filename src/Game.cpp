@@ -3,6 +3,7 @@
 #include "LevelSelect.h"
 #include "Play.h"
 #include "Leaderboard.h"
+#include "TowerManager.cpp"
 
 Game::Game() : window(nullptr), renderer(nullptr), isRunning(true), currentState(MENU), menu(nullptr) {}
 
@@ -58,9 +59,13 @@ bool Game::init(const char* title, int width, int height) {
         Mix_PlayMusic(bgm, -1);  // Phát nhạc lặp vô hạn
     }
 
+    towerManager.loadTowers(renderer, "assets/data/towers.json");
     // Khởi tạo menu sau khi renderer đã có
+
     menu = new Menu(renderer, &isRunning, this);
     levelSelect = new LevelSelect(renderer, &isRunning, this);
+
+
     return true;
 }
 
@@ -79,6 +84,8 @@ void Game::run() {
                 menu->handleEvents(event);
             } else if (currentState == LEVEL_SELECT) {
                 levelSelect->handleEvents(event);
+            } else if (currentState == PLAY) {
+                play->handleEvent(event);
             }
             render();
         }
@@ -134,11 +141,12 @@ void Game::render() {
         //Menu menu(renderer);
         menu->render();
     } else if (currentState == LEVEL_SELECT) {
-
         levelSelect->render();
     } else if (currentState == PLAY) {
-        Play play(renderer);
-        play.render();
+        if (play == nullptr) {
+            play = new Play(renderer, &isRunning, this);
+        }
+        play->render();
     } else if (currentState == LEADERBOARD) {
         Leaderboard leaderboard(renderer);
         leaderboard.render();

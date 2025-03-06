@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]) {
     Game game;
 
-    if (!game.init("Tower Defense", 1200, 800)) {
+    if (!game.init("Tower Defense", 1280, 853)) {
         return -1;
     }
 

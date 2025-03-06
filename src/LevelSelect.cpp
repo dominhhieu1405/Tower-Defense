@@ -22,7 +22,7 @@ LevelSelect::LevelSelect(SDL_Renderer* renderer, bool* isRunning, Game* game)
 
     loadLevels("assets/data/levels.json");
 
-    int startX = (1200 - (3 * BUTTON_WIDTH + 2 * BUTTON_SPACING)) / 2;
+    int startX = (1280 - (3 * BUTTON_WIDTH + 2 * BUTTON_SPACING)) / 2;
     int startY = 250 + 50;  // Dưới logo
 
     for (int i = 0; i < 9; i++) {
@@ -31,7 +31,7 @@ LevelSelect::LevelSelect(SDL_Renderer* renderer, bool* isRunning, Game* game)
         levelButtons[i] = { startX + col * (BUTTON_WIDTH + BUTTON_SPACING), startY + row * (BUTTON_HEIGHT + BUTTON_SPACING), BUTTON_WIDTH, BUTTON_HEIGHT };
     }
 
-    backButton = { (1200 - BUTTON_WIDTH) / 2, startY + 3 * (BUTTON_HEIGHT + BUTTON_SPACING), BUTTON_WIDTH, BUTTON_HEIGHT };
+    backButton = { (1280 - BUTTON_WIDTH) / 2, startY + 3 * (BUTTON_HEIGHT + BUTTON_SPACING), BUTTON_WIDTH, BUTTON_HEIGHT };
 }
 
 LevelSelect::~LevelSelect() {
@@ -68,7 +68,7 @@ void LevelSelect::loadLevels(const char* filename) {
 void LevelSelect::render() {
     SDL_RenderCopy(renderer, backgroundTexture, NULL, NULL);
 
-    SDL_Rect logoRect = { (1200 - 500) / 2, 35, 500, 250 };
+    SDL_Rect logoRect = { (1280 - 500) / 2, 35, 500, 250 };
     SDL_RenderCopy(renderer, logoTexture, NULL, &logoRect);
 
     for (int i = 0; i < levels.size(); i++) {
