@@ -91,7 +91,7 @@ void Play::handleEvent(SDL_Event& event) {
                         draggedTower = &tower;
                         mouseX = clickX;
                         mouseY = clickY;
-                        SDL_Log("Dragging Tower!");
+                        //SDL_Log("Dragging Tower!");
                         break;
                     }
                     towerX += towerSpacing;
