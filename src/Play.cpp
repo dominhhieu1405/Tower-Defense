@@ -6,7 +6,16 @@
 Play::Play(SDL_Renderer* renderer, bool* isRunning, Game* game)
         : renderer(renderer), isRunning(isRunning), game(game), tilesetTexture(nullptr) {
     loadMap(game->selectedLevel);
+    startTick = SDL_GetTicks();
+    lastFrameTime = SDL_GetTicks();
+    currentFrame = 0;
+    money = 200;
+    lives = 5;
 
+    gameFont = TTF_OpenFont("assets/fonts/wood.ttf", 24); // Kích thước 24px
+    if (!gameFont) {
+        printf("Failed to load font: %s\n", TTF_GetError());
+    }
 }
 
 Play::~Play() {
@@ -79,12 +88,12 @@ void Play::handleEvent(SDL_Event& event) {
 
                 int bottomPanelY = MAP_HEIGHT * TILE_SIZE; // Vị trí y bắt đầu vùng hiển thị tower
                 int towerY = bottomPanelY + (149 - 128) / 2;
-                int towerX = 10;
-                const int towerSpacing = 149;
+                int towerX = 256;
+                const int towerSpacing = 128;
 
                 // Kiểm tra nếu nhấn vào một tower
                 for (auto& tower : game->towerManager.towers) {
-                    int towerStartX = towerX + (149 - 64) / 2;
+                    int towerStartX = towerX + (128 - 64) / 2;
                     if (clickX >= towerStartX && clickX <= towerStartX + 64 &&
                         clickY >= towerY && clickY <= towerY + 128) {
                         isDragging = true;
@@ -102,12 +111,12 @@ void Play::handleEvent(SDL_Event& event) {
         case SDL_MOUSEMOTION:
             if (isDragging && draggedTower) {
                 mouseX = event.motion.x;
-                mouseY = event.motion.y;
+                mouseY = event.motion.y; // Căn giữa con trỏ chuột
 
-                if (mouseX > 0 && mouseY > 0 && mouseX < MAP_WIDTH * TILE_SIZE && mouseY < MAP_HEIGHT * TILE_SIZE) {
+                if (mouseX > 0 && mouseY > 0 && mouseX < MAP_WIDTH * TILE_SIZE && mouseY < MAP_HEIGHT * TILE_SIZE - 49 ) {
                     // Xác định tile gần nhất
                     int tileX = mouseX / TILE_SIZE;
-                    int tileY = mouseY / TILE_SIZE;
+                    int tileY = (mouseY + 49) / TILE_SIZE; // Lệch xuống dưới 49px, căn theo chân towere
 
                     // Kiểm tra tile có hợp lệ không
                     int tileIndex = mapData[tileY][tileX]; // Lấy giá trị ô
@@ -131,8 +140,19 @@ void Play::handleEvent(SDL_Event& event) {
     }
 }
 
+
 void Play::render() {
     if (!tilesetTexture || mapData.empty()) return;
+
+    Uint32 now = SDL_GetTicks();
+    if (now - lastFrameTime >= 200) {  // Cập nhật frame sau mỗi 200ms
+        lastFrameTime = now;
+        currentFrame++;
+        // Nếu max int thì reset về 0
+        if (currentFrame >= 1000000) {
+            currentFrame = 0;
+        }
+    }
 
     SDL_Rect srcRect = {0, 0, TILE_SIZE, TILE_SIZE};
     SDL_Rect destRect = {0, 0, TILE_SIZE, TILE_SIZE};
@@ -155,8 +175,8 @@ void Play::render() {
     // Vẽ danh sách các Tower dưới cùng
     int bottomPanelY = MAP_HEIGHT * TILE_SIZE;
     int towerY = bottomPanelY + (149 - 128) / 2;
-    int towerX = 10;
-    const int towerSpacing = 149;
+    int towerX = 256; // Bắt đầu từ vị trí 256px
+    const int towerSpacing = 128;
 
     // Vẽ nền panel
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
@@ -168,20 +188,36 @@ void Play::render() {
         if (tower.texture) {
             SDL_Rect towerSrc = {0, 0, 64, 128};
             SDL_Rect towerDest = {
-                    towerX + (149 - 64) / 2,
+                    towerX + (towerSpacing - 64) / 2,
                     towerY,
                     64, 128
             };
             SDL_RenderCopy(renderer, tower.texture, &towerSrc, &towerDest);
+
+
+            // Lấy weapon của Level 1 (hoặc level hiện tại)
+            const TowerLevel& level = tower.levels[0];
+            if (level.weapon.path != "") {
+                int weaponWidth = level.weapon.frameWidth / level.weapon.frameCount;
+                int weaponHeight = level.weapon.frameHeight;
+
+                SDL_Rect weaponSrc = {(currentFrame % level.weapon.frameCount) * weaponWidth, 0, weaponWidth, weaponHeight};
+                SDL_Rect weaponDest = {
+                        towerDest.x + (towerDest.w - weaponWidth) / 2,
+                        towerDest.y,  // Chống lên tower
+                        weaponWidth, weaponHeight
+                };
+
+                SDL_RenderCopy(renderer, level.weapon.texture, &weaponSrc, &weaponDest);
+            }
+
             towerX += towerSpacing;
         }
     }
 
     // Vẽ bản sao Tower nếu đang kéo
     if (isDragging && draggedTower) {
-        SDL_Rect towerSrc = {0, 0, 64, 128};
-        SDL_Rect draggedRect = {mouseX - 32, mouseY - 64, 64, 128}; // Căn giữa con trỏ chuột
-        SDL_RenderCopy(renderer,  draggedTower->texture, &towerSrc, &draggedRect);
+
         // Vẽ lớp phủ màu đỏ trong suốt 50% lên tile gần nhất
 
         if (highlightTileX >= 0 && highlightTileY >= 0) {
@@ -195,7 +231,66 @@ void Play::render() {
             SDL_RenderFillRect(renderer, &highlightRect);
             SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_NONE);
         }
+
+
+        SDL_Rect towerSrc = {0, 0, 64, 128};
+        SDL_Rect draggedRect = {mouseX - 32, mouseY - 64, 64, 128}; // Căn giữa con trỏ chuột
+        SDL_RenderCopy(renderer,  draggedTower->texture, &towerSrc, &draggedRect);
+
+        // Lấy weapon của Level 1 (hoặc level hiện tại)
+        const TowerLevel& level = draggedTower->levels[0];
+        if (level.weapon.path != "") {
+            int weaponWidth = level.weapon.frameWidth / level.weapon.frameCount;
+            int weaponHeight = level.weapon.frameHeight;
+
+            SDL_Rect weaponSrc = {0, 0, weaponWidth, weaponHeight};
+            SDL_Rect weaponDest = {
+                    draggedRect.x + (draggedRect.w - weaponWidth) / 2,
+                    draggedRect.y,  // Chống lên tower
+                    weaponWidth, weaponHeight
+            };
+
+            SDL_RenderCopy(renderer, level.weapon.texture, &weaponSrc, &weaponDest);
+        }
     }
+
+
+
+    int timePlayed =  int ((SDL_GetTicks() - startTick) / 1000);
+
+    int minutes = timePlayed / 60;
+    int seconds = timePlayed % 60;
+    char timeText[20];
+    snprintf(timeText, sizeof(timeText), u8"Thời gian: %02d:%02d", minutes, seconds);
+    SDL_Surface* textSurface = TTF_RenderUTF8_Blended(gameFont, timeText, {255, 255, 255, 255});
+
+
+
+    SDL_Texture* timeTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+    SDL_FreeSurface(textSurface);
+
+    // Hiển thị ở góc trên bên trái
+    SDL_Rect timeRect = {10, bottomPanelY, textSurface->w, textSurface->h};
+    SDL_RenderCopy(renderer, timeTexture, NULL, &timeRect);
+
+
+    char moneyText[20];
+    snprintf(moneyText, sizeof(moneyText), u8"Tiền: %03d", money);
+    SDL_Surface* textSurface2 = TTF_RenderUTF8_Blended(gameFont, moneyText, {255, 255, 255, 255});
+    SDL_Texture* moneyTexture = SDL_CreateTextureFromSurface(renderer, textSurface2);
+    SDL_FreeSurface(textSurface2);
+
+    char livesText[20];
+    snprintf(livesText, sizeof(livesText), u8"Mạng: %02d", lives);
+    SDL_Surface* textSurface3 = TTF_RenderUTF8_Blended(gameFont, livesText, {255, 255, 255, 255});
+    SDL_Texture* livesTexture = SDL_CreateTextureFromSurface(renderer, textSurface3);
+    SDL_FreeSurface(textSurface3);
+
+    SDL_Rect moneyRect = {10, bottomPanelY + 45, textSurface2->w, textSurface2->h};
+    SDL_RenderCopy(renderer, moneyTexture, NULL, &moneyRect);
+
+    SDL_Rect livesRect = {10, bottomPanelY + 90, textSurface3->w, textSurface3->h};
+    SDL_RenderCopy(renderer, livesTexture, NULL, &livesRect);
 }
 
 

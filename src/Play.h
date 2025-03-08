@@ -37,7 +37,14 @@ private:
     //std::vector<int> allowTiles = {18, 33, 35, 38, 44, 45, 50, 60, 61, 118, 155, 156, 202, 204, 218, 220, 234, 236}; //Tăng 1 đơn vị
     std::vector<int> allowTiles = {19, 34, 36, 39, 45, 46, 51, 61, 62, 119, 156, 157, 203, 205, 219, 221, 235, 237}; //Tăng 1 đơn vị
 
+    Uint32 startTick = 0;
+    Uint32 lastFrameTime = 0;
+    int currentFrame = 0;
 
+    TTF_Font* gameFont = nullptr;
+
+    int money = 200;
+    int lives = 5;
 
     // Kéo thả tower
     bool isDragging = false;
@@ -46,6 +53,7 @@ private:
 
     SDL_Texture* loadTexture(const std::string& path);
     void parseMapJson(const std::string& filePath);
+
 };
 
 #endif

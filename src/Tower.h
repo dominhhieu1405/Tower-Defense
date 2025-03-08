@@ -49,6 +49,7 @@ struct Tower {
     std::string imagePath;
     SDL_Texture* texture = nullptr;
 
+
     int cost[3];          // Giá mua & nâng cấp (LV1 -> LV3)
     int damage[3];        // Sát thương theo từng level
     float attackSpeed[3]; // Tốc độ đánh theo từng level
