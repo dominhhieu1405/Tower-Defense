@@ -6,6 +6,7 @@
 #include <vector>
 #include <string>
 #include "Game.h"
+#include "playTowers.h"
 
 class Play {
 public:
@@ -23,6 +24,8 @@ private:
     Game* game;
     SDL_Texture* tilesetTexture;
     std::vector<std::vector<int>> mapData;
+
+    std::vector<playTowers> towers;
 
 
 
@@ -42,6 +45,7 @@ private:
     int currentFrame = 0;
 
     TTF_Font* gameFont = nullptr;
+    Mix_Chunk* placeSound;
 
     int money = 200;
     int lives = 5;

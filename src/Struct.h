@@ -21,6 +21,11 @@ struct Tile {
 };
 
 
-
+struct placedTower {
+    int tileX; // 1 đến 20
+    int tileY; // 1 đến 11
+    int level;
+    //tower* tower;
+};
 
 #endif //TOWER_DEFENSE_STRUCT_H

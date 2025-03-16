@@ -67,6 +67,11 @@ struct Tower {
             std::cerr << "❌ Failed to create texture from " << imagePath << ": " << SDL_GetError() << std::endl;
         }
     }
+
+
+    bool operator==(const Tower& other) const {
+        return id == other.id;
+    }
 };
 
 #endif // TOWER_H

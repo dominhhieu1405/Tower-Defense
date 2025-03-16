@@ -1,5 +1,6 @@
-#include "play.h"
+#include "Play.h"
 #include "Tower.h"
+#include "playTowers.h"
 #include <fstream>
 #include <nlohmann/json.hpp>
 
@@ -9,12 +10,17 @@ Play::Play(SDL_Renderer* renderer, bool* isRunning, Game* game)
     startTick = SDL_GetTicks();
     lastFrameTime = SDL_GetTicks();
     currentFrame = 0;
-    money = 200;
+    money = 2000000;
     lives = 5;
 
     gameFont = TTF_OpenFont("assets/fonts/wood.ttf", 24); // Kích thước 24px
     if (!gameFont) {
         printf("Failed to load font: %s\n", TTF_GetError());
+    }
+
+    placeSound = Mix_LoadWAV("assets/audios/thud.wav");
+    if (!placeSound) {
+        SDL_Log("Failed to load click sound: %s", Mix_GetError());
     }
 }
 
@@ -22,6 +28,9 @@ Play::~Play() {
     if (tilesetTexture) {
         SDL_DestroyTexture(tilesetTexture);
     }
+
+    Mix_FreeChunk(placeSound);
+    Mix_CloseAudio();
 }
 
 SDL_Texture* Play::loadTexture(const std::string& path) {
@@ -123,6 +132,16 @@ void Play::handleEvent(SDL_Event& event) {
                     highlightTileX = tileX * TILE_SIZE;
                     highlightTileY = tileY * TILE_SIZE;
                     highlightValid = std::find(std::begin(allowTiles), std::end(allowTiles), tileIndex) != std::end(allowTiles);
+
+                    // Kiểm tra xem có đặt tower lên tower cũ không
+                    for (int i = 0; i < (int) towers.size(); i++) {
+                        playTowers& tower = towers[i];
+                        if (tower.x == tileX && tower.y == tileY) {
+                            highlightValid = false;
+                            break;
+                        }
+                    }
+
                 } else {
                     highlightTileX = -1;
                     highlightTileY = -1;
@@ -133,6 +152,73 @@ void Play::handleEvent(SDL_Event& event) {
 
         case SDL_MOUSEBUTTONUP:
             if (event.button.button == SDL_BUTTON_LEFT) {
+                // console log
+                if (isDragging) {
+                    // Kiểm tra chỗ đặt có hợp lệ không
+                    if (highlightValid) {
+                        // Kiểm tra xem có đủ tiền không
+                        if (money < draggedTower->cost[0]) {
+                            SDL_Log("Không đủ tiền mua tower!");
+                            break;
+                        }
+
+                        // Kiểm tra xem có đặt tower lên tower cũ không
+                        // không dùng auto
+                        for (int i = 0; i < (int) towers.size(); i++) {
+                            playTowers& tower = towers[i];
+                            if (tower.x == highlightTileX / TILE_SIZE && tower.y == highlightTileY / TILE_SIZE) {
+
+//                                // Nếu đặt tower lên tower cũ thì nâng cấp tower
+//                                if (tower.tower == draggedTower) {
+//                                    if (tower.level < 2) {
+//                                        // Kieemr tra xem có đủ tiền nâng cấp không
+//                                        if (money < draggedTower->cost[tower.level + 1]) {
+//                                            SDL_Log("Không đủ tiền nâng cấp tower!");
+//                                            break;
+//                                        }
+//                                        tower.level = tower.level + 1;
+//                                        SDL_Log("Nâng cấp tower lên level %d", tower.level + 1);
+//                                        // Trừ tiền
+//                                        money -= draggedTower->cost[tower.level];
+//                                    } else {
+//                                        SDL_Log("Đã đạt cấp độ tối đa!");
+//                                    }
+//                                } else {
+//                                    SDL_Log("Không thể đặt tower lên tower khác!");
+//                                }
+                                SDL_Log("Không thể đặt tower lên tower khác!");
+                                return;
+                            }
+                        }
+
+                        // Kiểm tra xem có đặt tower lên đường không
+                        int tileIndex = mapData[highlightTileY / TILE_SIZE][highlightTileX / TILE_SIZE];
+                        if (std::find(std::begin(allowTiles), std::end(allowTiles), tileIndex) == std::end(allowTiles)) {
+                            SDL_Log("Không thể đặt tower lên đường!");
+                            return;
+                        }
+
+                        // Đặt tower
+                        SDL_Log("Highlight tile: %d, %d", highlightTileX/TILE_SIZE, highlightTileY/TILE_SIZE);
+                        playTowers newTower;
+                        newTower.tower = draggedTower;
+                        newTower.x = highlightTileX / TILE_SIZE;
+                        newTower.y = highlightTileY / TILE_SIZE;
+                        newTower.level = 0;
+                        towers.push_back(newTower);
+
+                        // Trừ tiền
+                        money -= draggedTower->cost[0];
+
+                        if (placeSound) {
+                            Mix_PlayChannel(-1, placeSound, 0);
+                        }
+
+                    } else {
+                        SDL_Log("Không thể đặt tower ở đây!");
+                    }
+                }
+
                 isDragging = false;
                 draggedTower = nullptr;
             }
@@ -215,6 +301,37 @@ void Play::render() {
         }
     }
 
+
+    // Vẽ các tower đã đặt
+    for (const auto& tower : towers) {
+        SDL_Rect towerSrc = {0 * tower.level, 0, 64, 128}; // Lấy frame theo level
+        // Vì tower height = 128 nên đặt lên trên 1 tile
+        SDL_Rect towerDest = {
+                tower.x * TILE_SIZE,
+                tower.y * TILE_SIZE - 64, // Chống lên trên 1 tile
+                64, 128
+        };
+        SDL_RenderCopy(renderer, tower.tower->texture, &towerSrc, &towerDest);
+
+        // Lấy weapon của Level 1 (hoặc level hiện tại)
+        const TowerLevel& level = tower.tower->levels[tower.level];
+        if (level.weapon.path != "") {
+            int weaponWidth = level.weapon.frameWidth / level.weapon.frameCount;
+            int weaponHeight = level.weapon.frameHeight;
+
+            //SDL_Rect weaponSrc = {(currentFrame % level.weapon.frameCount) * weaponWidth, 0, weaponWidth, weaponHeight};
+            SDL_Rect weaponSrc = {0, 0, weaponWidth, weaponHeight};
+            SDL_Rect weaponDest = {
+                    towerDest.x + (towerDest.w - weaponWidth) / 2,
+                    towerDest.y,  // Chống lên tower
+                    weaponWidth, weaponHeight
+            };
+
+            SDL_RenderCopy(renderer, level.weapon.texture, &weaponSrc, &weaponDest);
+        }
+    }
+
+
     // Vẽ bản sao Tower nếu đang kéo
     if (isDragging && draggedTower) {
 
@@ -255,7 +372,6 @@ void Play::render() {
     }
 
 
-
     int timePlayed =  int ((SDL_GetTicks() - startTick) / 1000);
 
     int minutes = timePlayed / 60;
@@ -280,14 +396,15 @@ void Play::render() {
     SDL_Texture* moneyTexture = SDL_CreateTextureFromSurface(renderer, textSurface2);
     SDL_FreeSurface(textSurface2);
 
+    SDL_Rect moneyRect = {10, bottomPanelY + 45, textSurface2->w, textSurface2->h};
+    SDL_RenderCopy(renderer, moneyTexture, NULL, &moneyRect);
+
+
     char livesText[20];
     snprintf(livesText, sizeof(livesText), u8"Mạng: %02d", lives);
     SDL_Surface* textSurface3 = TTF_RenderUTF8_Blended(gameFont, livesText, {255, 255, 255, 255});
     SDL_Texture* livesTexture = SDL_CreateTextureFromSurface(renderer, textSurface3);
     SDL_FreeSurface(textSurface3);
-
-    SDL_Rect moneyRect = {10, bottomPanelY + 45, textSurface2->w, textSurface2->h};
-    SDL_RenderCopy(renderer, moneyTexture, NULL, &moneyRect);
 
     SDL_Rect livesRect = {10, bottomPanelY + 90, textSurface3->w, textSurface3->h};
     SDL_RenderCopy(renderer, livesTexture, NULL, &livesRect);
