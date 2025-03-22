@@ -5,8 +5,10 @@
 #include <SDL2/SDL_image.h>
 #include <vector>
 #include <string>
+#include <unordered_set>
 #include "Game.h"
-#include "playTowers.h"
+#include "playTower.h"
+#include "playEnemy.h"
 
 class Play {
 public:
@@ -25,9 +27,11 @@ private:
     SDL_Texture* tilesetTexture;
     std::vector<std::vector<int>> mapData;
 
-    std::vector<playTowers> towers;
+    std::vector<playTower> towers;
+    std::vector<playEnemy> enemies;
+    std::unordered_set<int> spawned = {};
 
-
+    nlohmann::json levelData;
 
     const int TILE_SIZE = 64;
     const int MAP_WIDTH = 20;
@@ -58,6 +62,9 @@ private:
     SDL_Texture* loadTexture(const std::string& path);
     void parseMapJson(const std::string& filePath);
 
+    void spawnEnemy();
+    void moveEnemies();
+    void renderEnemies();
 };
 
 #endif

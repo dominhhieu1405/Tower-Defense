@@ -1,6 +1,7 @@
 #include "Play.h"
 #include "Tower.h"
-#include "playTowers.h"
+#include "Enemy.h"
+#include "playTower.h"
 #include <fstream>
 #include <nlohmann/json.hpp>
 
@@ -45,6 +46,15 @@ void Play::loadMap(int levelID) {
     std::string mapPath = "assets/maps/" + std::to_string(levelID) + ".json";
     parseMapJson(mapPath);
     tilesetTexture = loadTexture("assets/images/Tileset/tileset.png");
+
+    std::string dataPath = "assets/data/levels/" + std::to_string(levelID) + ".json";
+    std::ifstream file(dataPath);
+    if (!file) {
+        SDL_Log("Failed to open level data file: %s", dataPath.c_str());
+        *isRunning = false; // Dừng game nếu không tải được dữ liệu level
+        return;
+    }
+    file >> levelData;
 }
 
 void Play::parseMapJson(const std::string& filePath) {
@@ -87,6 +97,8 @@ void Play::parseMapJson(const std::string& filePath) {
         }
     }
 }
+
+
 
 void Play::handleEvent(SDL_Event& event) {
     switch (event.type) {
@@ -135,7 +147,7 @@ void Play::handleEvent(SDL_Event& event) {
 
                     // Kiểm tra xem có đặt tower lên tower cũ không
                     for (int i = 0; i < (int) towers.size(); i++) {
-                        playTowers& tower = towers[i];
+                        playTower& tower = towers[i];
                         if (tower.x == tileX && tower.y == tileY) {
                             highlightValid = false;
                             break;
@@ -165,7 +177,7 @@ void Play::handleEvent(SDL_Event& event) {
                         // Kiểm tra xem có đặt tower lên tower cũ không
                         // không dùng auto
                         for (int i = 0; i < (int) towers.size(); i++) {
-                            playTowers& tower = towers[i];
+                            playTower& tower = towers[i];
                             if (tower.x == highlightTileX / TILE_SIZE && tower.y == highlightTileY / TILE_SIZE) {
 
 //                                // Nếu đặt tower lên tower cũ thì nâng cấp tower
@@ -200,7 +212,7 @@ void Play::handleEvent(SDL_Event& event) {
 
                         // Đặt tower
                         SDL_Log("Highlight tile: %d, %d", highlightTileX/TILE_SIZE, highlightTileY/TILE_SIZE);
-                        playTowers newTower;
+                        playTower newTower;
                         newTower.tower = draggedTower;
                         newTower.x = highlightTileX / TILE_SIZE;
                         newTower.y = highlightTileY / TILE_SIZE;
@@ -226,8 +238,195 @@ void Play::handleEvent(SDL_Event& event) {
     }
 }
 
+void Play::spawnEnemy() {
+    int timePlayed =  int ((SDL_GetTicks() - startTick) / 1000);
+
+    if (spawned.size() < levelData["total"]) {
+        for (auto& stage: levelData["stages"]) {
+            int stageTime = stage["time"];
+            if (stageTime <= timePlayed) {
+                for (auto& enemyData: stage["enemies"]) {
+                    int enemyID = enemyData["id"];
+                    int enemyType = enemyData["enemy"];
+                    int spawnTime = enemyData["time"];
+                    // Check nếu enemyID đã spawn thì skip
+                    if (spawned.find(enemyID) == spawned.end()) {
+                        if (stageTime + spawnTime <= timePlayed) {
+                            // Spawn enemy
+                            playEnemy newEnemy;
+                            newEnemy.enemy = &(game->enemyManager.enemies.at(enemyType));
+                            newEnemy.health = newEnemy.enemy->levels[0].health;
+                            newEnemy.maxHealth = newEnemy.enemy->levels[0].health;
+                            newEnemy.speed = newEnemy.enemy->levels[0].speed;
+                            SDL_Log("Speed: %f", newEnemy.speed);
+                            newEnemy.reward = newEnemy.enemy->levels[0].reward;
+                            //newEnemy.tileX = enemyData["x"];
+                            //newEnemy.tileY = enemyData["y"];
+                            newEnemy.path = enemyData["path"];
+                            newEnemy.rotation = enemyData["rotation"];
+
+                            newEnemy.spawnTime = SDL_GetTicks();
+                            newEnemy.lastMove = SDL_GetTicks();
+                            newEnemy.tileX = levelData["paths"][newEnemy.path][0]["x"];
+                            newEnemy.tileY = levelData["paths"][newEnemy.path][0]["y"];
+
+
+                            if (newEnemy.rotation == 0) { // đi từ cạnh trên xuống
+                                newEnemy.x = TILE_SIZE * newEnemy.tileX;
+                                newEnemy.y = TILE_SIZE * (newEnemy.tileY - 1);
+                            } else if (newEnemy.rotation == 90) { // đi từ cạnh phải qua trái
+                                newEnemy.x = TILE_SIZE * (newEnemy.tileX + 1);
+                                newEnemy.y = TILE_SIZE * newEnemy.tileY;
+                            } else if (newEnemy.rotation == 180) { // đi từ cạnh dưới lên
+                                newEnemy.x = TILE_SIZE * newEnemy.tileX;
+                                newEnemy.y = TILE_SIZE * (newEnemy.tileY + 1);
+                            } else if (newEnemy.rotation == 270) { // đi từ cạnh trái qua phải
+                                newEnemy.x = TILE_SIZE * (newEnemy.tileX - 1);
+                                newEnemy.y = TILE_SIZE * newEnemy.tileY;
+                            }
+
+                            newEnemy.level = enemyData["level"];
+                            enemies.push_back(newEnemy);
+                            spawned.insert(enemyID);
+
+                            SDL_Log("Spawned enemy %d at %d", enemyID, timePlayed);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+void Play::moveEnemies() {
+    // spped = 1 là đi 64px / giây
+    // cứ 1/8s thì di chuyển 8px
+
+    // tốc độ quay: 90 độ / 0.3s
+    // cứ 30ms quay được 9 độ
+
+    // các hướng:
+    // 0 độ: ĐI xuống dưới
+    // 90 độ: Phải qua tráu
+    // 180 độ: Lên trên
+    // 270 độ: Trái qua phải
+
+
+    for (int i = 0; i < (int) enemies.size(); i++) {
+        playEnemy& enemy = enemies[i];
+        if (enemy.status == 1) {
+            Uint32 now = SDL_GetTicks();
+
+            // kiểm tra hướng đi
+
+            if (enemy.rotation >= 360) {
+                enemy.rotation = enemy.rotation % 360;
+            }
+            // Kiểm tra xem ô hiện tại có phải ô cuối cùng không
+            int totalPath = levelData["paths"][enemy.path].size();
+            if (enemy.pathIndex < totalPath - 1) {
+                int nextTileX = levelData["paths"][enemy.path][enemy.pathIndex + 1]["x"];
+                int nextTileY = levelData["paths"][enemy.path][enemy.pathIndex + 1]["y"];
+
+                // Nếu ô tiếp theo ở trên
+                if (enemy.rotation % 90 == 0) {
+                    enemy.tmpRotation = enemy.rotation;
+                }
+                int nextRotation = 0;
+                if (nextTileX < enemy.tileX) {
+                    nextRotation = 90;
+                } else if (nextTileX > enemy.tileX) {
+                    nextRotation = 270;
+                } else if (nextTileY > enemy.tileY) {
+                    nextRotation = 0;
+                } else {
+                    nextRotation = 180;
+                }
+                // Nếu rotaion = 90 và x <= enemy tileX * TILE_SIZE      |
+                // hoặc rotation = 270 và x >= enemy tileX * TILE_SIZE   |  -> bắt đầu quay
+                // hoặc rotation = 0 và y >= enemy tileY * TILE_SIZE     |
+                // hoặc rotation = 180 và y <= enemy tileY * TILE_SIZE   |
+                if ((enemy.tmpRotation == 90 && enemy.x >= nextTileX * TILE_SIZE) ||
+                    (enemy.tmpRotation == 270 && enemy.x <= nextTileX * TILE_SIZE) ||
+                    (enemy.tmpRotation == 0 && enemy.y <= nextTileY * TILE_SIZE) ||
+                    (enemy.tmpRotation == 180 && enemy.y >= nextTileY * TILE_SIZE)) {
+
+                    if (now - enemy.lastMove >= 30 && enemy.rotation != nextRotation) {
+                        SDL_Log("Quay hướng mới: %d => %d", enemy.tmpRotation, nextRotation);
+                        if (enemy.tmpRotation == 90 || enemy.tmpRotation == 180) {
+                            if (nextRotation > enemy.rotation) {
+                                enemy.rotation += 9;
+                            } else {
+                                enemy.rotation -= 9;
+                            }
+                        } else if (enemy.tmpRotation == 0) {
+                            if (nextRotation == 270) {
+                                enemy.rotation -= 9 + 360;
+                            } else {
+                                enemy.rotation += 9;
+                            }
+                        } else if (enemy.tmpRotation == 270) {
+                            if (nextRotation == 0) {
+                                enemy.rotation += 9;
+                            } else {
+                                enemy.rotation -= 9;
+                            }
+                        }
+
+                        // Kiểm tra xem đã quay đúng hướng chưa
+                        if (enemy.rotation == nextRotation) {
+                            enemy.tileX = nextTileX;
+                            enemy.tileY = nextTileY;
+                            enemy.pathIndex++;
+                            enemy.tmpRotation = enemy.rotation;
+                        }
+
+                    }
+
+                }
+
+            }
+
+            if (now - enemy.lastMove >= 62 && enemy.rotation % 90 == 0) {
+                enemy.lastMove = now;
+
+                // tốc độ mỗi 125ms
+                double speed = enemy.speed * 4.0;
+                int moveSpeed = (int) speed;
+
+                if (enemy.rotation == 0) {
+                    enemy.y += moveSpeed;
+                } else if (enemy.rotation == 90) {
+                    enemy.x -= moveSpeed;
+                } else if (enemy.rotation == 180) {
+                    enemy.y -= moveSpeed;
+                } else if (enemy.rotation == 270) {
+                    enemy.x += moveSpeed;
+                }
+
+            }
+        }
+    }
+}
+
+void Play::renderEnemies() {
+    for (int i = 0; i < (int) enemies.size(); i++) {
+        playEnemy& enemy = enemies[i];
+        if (enemy.status == 1) {
+            int enemyCurrentFrame = (SDL_GetTicks() - enemy.spawnTime) / 125;
+
+            SDL_Rect enemySrc = {(enemyCurrentFrame % enemy.enemy->levels[enemy.level].frame) * enemy.enemy->frameWidth, 3 * enemy.level * enemy.enemy->frameHeight, enemy.enemy->frameWidth, enemy.enemy->frameHeight};
+            SDL_Rect enemyDest = {enemy.x - 64, enemy.y, TILE_SIZE, TILE_SIZE};
+            // Quay 90 độ
+            SDL_RenderCopyEx(renderer, enemy.enemy->texture, &enemySrc, &enemyDest, enemy.rotation, NULL, SDL_FLIP_NONE);
+        }
+    }
+}
 
 void Play::render() {
+
+    int timePlayed =  int ((SDL_GetTicks() - startTick) / 1000);
+
     if (!tilesetTexture || mapData.empty()) return;
 
     Uint32 now = SDL_GetTicks();
@@ -301,6 +500,20 @@ void Play::render() {
         }
     }
 
+//    // Test vẻ enemy
+//    Enemy enemy;
+//    int enemyLevel = 0;
+//    enemy = game->enemyManager.enemies[0];
+//    SDL_Rect enemySrc = {(currentFrame % enemy.levels[enemyLevel].frame) * enemy.frameWidth, 0, enemy.frameWidth, enemy.frameHeight};
+//    SDL_Rect enemyDest = {5 * TILE_SIZE, 5 * TILE_SIZE, TILE_SIZE, TILE_SIZE};
+//    // Quay 90 độ
+//    SDL_RenderCopyEx(renderer, enemy.texture, &enemySrc, &enemyDest, 180, NULL, SDL_FLIP_NONE);
+
+    // Spawn enemy
+    spawnEnemy();
+    moveEnemies();
+    renderEnemies();
+
 
     // Vẽ các tower đã đặt
     for (const auto& tower : towers) {
@@ -372,7 +585,6 @@ void Play::render() {
     }
 
 
-    int timePlayed =  int ((SDL_GetTicks() - startTick) / 1000);
 
     int minutes = timePlayed / 60;
     int seconds = timePlayed % 60;

@@ -4,6 +4,7 @@
 #include "Play.h"
 #include "Leaderboard.h"
 #include "TowerManager.cpp"
+#include "EnemyManager.cpp"
 
 Game::Game() : window(nullptr), renderer(nullptr), isRunning(true), currentState(MENU), menu(nullptr) {}
 
@@ -60,6 +61,7 @@ bool Game::init(const char* title, int width, int height) {
     }
 
     towerManager.loadTowers(renderer, "assets/data/towers.json");
+    enemyManager.loadEnemy(renderer, "assets/data/enemies.json");
     // Khởi tạo menu sau khi renderer đã có
 
     menu = new Menu(renderer, &isRunning, this);

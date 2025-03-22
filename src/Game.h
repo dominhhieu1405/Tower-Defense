@@ -6,6 +6,7 @@
 #include <SDL2/SDL_ttf.h>
 #include <SDL2/SDL_mixer.h>
 #include "TowerManager.h"
+#include "EnemyManager.h"
 
 
 class Menu;
@@ -30,6 +31,7 @@ public:
     int selectedLevel = -1;
 
     TowerManager towerManager;
+    EnemyManager enemyManager;
 
     bool init(const char* title, int width, int height);
 
