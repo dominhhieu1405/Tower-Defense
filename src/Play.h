@@ -9,6 +9,9 @@
 #include "Game.h"
 #include "playTower.h"
 #include "playEnemy.h"
+#include "playBullet.h"
+
+
 
 class Play {
 public:
@@ -25,10 +28,12 @@ private:
     bool* isRunning;
     Game* game;
     SDL_Texture* tilesetTexture;
+    SDL_Texture* buttonsTexture;
     std::vector<std::vector<int>> mapData;
 
     std::vector<playTower> towers;
     std::vector<playEnemy> enemies;
+    std::vector<Bullet> bullets;
     std::unordered_set<int> spawned = {};
 
     nlohmann::json levelData;
@@ -67,7 +72,12 @@ private:
     void renderEnemies();
 
     void movePlayTowers();
+    void attackEnemies();
     void renderPlayTowers();
+    void updateBullets();
+    void renderBullets();
+
+    void renderDraggingTower();
 };
 
 #endif

@@ -54,7 +54,7 @@ void TowerManager::loadTowers(SDL_Renderer* renderer, const std::string& filePat
         towers.push_back(tower);
     }
 
-    std::cout << "✅ Loaded " << towers.size() << " towers successfully!" << std::endl;
+    std::cout << "- Loaded " << towers.size() << " towers successfully!" << std::endl;
 }
 
 void TowerManager::freeTextures() {
@@ -78,5 +78,5 @@ void TowerManager::freeTextures() {
             }
         }
     }
-    std::cout << "✅ Freed tower textures!" << std::endl;
+    std::cout << "- Freed tower textures!" << std::endl;
 }

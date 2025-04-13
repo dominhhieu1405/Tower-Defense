@@ -53,6 +53,7 @@ struct Tower {
     int cost[3];          // Giá mua & nâng cấp (LV1 -> LV3)
     int damage[3];        // Sát thương theo từng level
     float attackSpeed[3]; // Tốc độ đánh theo từng level
+    int attackRange[3] = {200, 225, 250};   // Tầm bắn theo từng level
     int range[3];         // Tầm bắn theo từng level
     std::vector<TowerLevel> levels;
 

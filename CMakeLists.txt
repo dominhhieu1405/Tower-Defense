@@ -21,6 +21,10 @@ if (NOT SDL2_LIB OR NOT SDL2_MAIN_LIB OR NOT SDL2_MIXER_LIB OR NOT SDL2_TTF_LIB 
         message(FATAL_ERROR "Không tìm thấy SDL2 hoặc các thư viện liên quan!")
 endif()
 
+# Đường dẫn file resource (icon)
+set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/assets/icon.rc")
+
+
 # Thêm thư mục include
 include_directories(
         ${SDL2_DIR}/include
@@ -34,7 +38,7 @@ include_directories(
 file(GLOB SOURCES "src/*.cpp")
 
 # Tạo file thực thi
-add_executable(tower_defense ${SOURCES})
+add_executable(tower_defense ${SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
 
 # Thêm thư viện JSON
 find_package(nlohmann_json CONFIG REQUIRED)

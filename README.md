@@ -9,6 +9,7 @@
 - [Button Sound Effect](https://pixabay.com/sound-effects/mouse-click-sound-233951/)
 - [Star icon](https://pix3lcat.itch.io/star-collectibles)
 - [Thud Sound Effect](https://mixkit.co/free-sound-effects/thud/)
+- [Buttons Pack](https://slyfox-studios.itch.io/buttons-pack)
 ## Software
 - [CLion](https://www.jetbrains.com/clion/)
 - [Tilemap Editor](https://www.mapeditor.org/)

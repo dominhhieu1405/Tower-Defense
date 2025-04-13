@@ -21,7 +21,7 @@ struct playEnemy {
     int y;
     int path;
     int pathIndex = 0;
-    int rotation = 90; // Góc quay của enemy
+    int rotation = 90; // Góc quay của enemyzz
     int tmpRotation = 90;
 
     Uint32 spawnTime = 0;

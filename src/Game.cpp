@@ -43,6 +43,13 @@ bool Game::init(const char* title, int width, int height) {
         SDL_Log("Window could not be created! SDL_Error: %s", SDL_GetError());
         return false;
     }
+    SDL_Surface* icon = IMG_Load("assets/images/favicon.png");
+    if (icon) {
+        SDL_SetWindowIcon(window, icon);
+        SDL_FreeSurface(icon);
+    } else {
+        SDL_Log("Failed to load icon: %s", SDL_GetError());
+    }
 
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
     if (!renderer) {
