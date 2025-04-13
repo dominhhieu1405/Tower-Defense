@@ -24,35 +24,434 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b91ede2-0053-4bac-bd32-ab27ed627ce2" name="Changes" comment="17/03/2024">
-      <change afterPath="$PROJECT_DIR$/assets/data/enemies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/levels/1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Enemy/FlyingLocust.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Enemy/MagmaCrab.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Enemy.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EnemyManager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EnemyManager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/playEnemy.h" afterDir="false" />
+    <list default="true" id="6b91ede2-0053-4bac-bd32-ab27ed627ce2" name="Changes" comment="22/03/2024">
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/query/cache-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/reply/cache-v2-90723c794598c8f3e0a0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/reply/cmakeFiles-v1-78987f8851625a1f540f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/reply/codemodel-v2-4eae8d93700a83d693c4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/reply/index-2025-02-21T09-52-08-0744.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/reply/target-copy_resources-Debug-ac30727ffb461dab5cb6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/reply/target-tower_defense-Debug-60695904cc9acc8d180c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.cmake/api/v1/reply/toolchains-v1-c8905d221a2a8aa1b1ee.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.ninja_deps" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/.ninja_log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/3.30.5/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/3.30.5/CMakeRCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/3.30.5/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/CMakeFiles/rules.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/audios/background.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/audios/background.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/audios/click.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/audios/click.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/audios/test.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/audios/thud.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/data/emenys.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/data/enemies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/data/levels.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/data/levels/1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/data/towers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/fonts/font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/fonts/text.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/fonts/wood.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Cloud-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Cloud-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Cloud-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/Clampbeetle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/Firebug.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/Firewasp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/Flying Locust.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/FlyingLocust.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/Leafbug.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/Magma Crab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/MagmaCrab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/Scorpion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Enemy/VoidButterfly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Tileset/Aseprite/Animated water tiles.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Tileset/Aseprite/Asset Preview - Tileset.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Tileset/Aseprite/Grass Tileset.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Tileset/PNGs/Animated water tiles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Tileset/PNGs/Grass Tileset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Tileset/Preview/Animated water tiles.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Tileset/Preview/Asset Preview - Tileset.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Tileset/tileset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Towers/Tower 01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Towers/Tower 02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Towers/Tower 03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Towers/Tower 04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Towers/Tower 05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Towers/Tower 06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Towers/Tower 07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Towers/Tower 08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Weapon - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Previews/Tower 01 - Weapon - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Weapon - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 01 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 02 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 03 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 01 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 02 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 03 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.bak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.bak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.bak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 01 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 02 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 03 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 01 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 02 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 03 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 01 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 02 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 03 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 01 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 02 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 03 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 01 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 02 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 03 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 01 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 02 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 03 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 01 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 02 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 03 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 01 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 02 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 03 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 01 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 02 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 03 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Weapon - Copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Weapon - Copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Weapon - Copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Weapon - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Previews/Tower 06 - Weapon - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Weapon - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level X - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level X - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level X - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level X - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/bird.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/button-ezgif.com-gif-maker.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/item.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/pipe_bot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/pipe_top.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/star-off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/images/star-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/map-tileset/map1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/map-tileset/map1.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/map-tileset/project.tiled-project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/map-tileset/project.tiled-session" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/map-tileset/set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/map-tileset/set.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/assets/maps/1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/build.ninja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg-manifest-install.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/vcpkg/compiler-file-hash-cache.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/vcpkg/info/nlohmann-json_3.11.3_x64-windows.list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/vcpkg/info/vcpkg-cmake-config_2024-05-23_x64-windows.list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/vcpkg/info/vcpkg-cmake_2024-04-23_x64-windows.list" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/vcpkg/manifest-info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/vcpkg/status" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/adl_serializer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/byte_container_with_subtype.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/abi_macros.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/conversions/from_json.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/conversions/to_chars.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/conversions/to_json.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/exceptions.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/hash.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/input/binary_reader.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/input/input_adapters.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/input/json_sax.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/input/lexer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/input/parser.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/input/position_t.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/iterators/internal_iterator.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/iterators/iter_impl.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/iterators/iteration_proxy.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/iterators/iterator_traits.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/iterators/json_reverse_iterator.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/iterators/primitive_iterator.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/json_custom_base_class.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/json_pointer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/json_ref.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/macro_scope.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/macro_unscope.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/meta/call_std/begin.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/meta/call_std/end.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/meta/cpp_future.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/meta/detected.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/meta/identity_tag.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/meta/is_sax.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/meta/std_fs.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/meta/type_traits.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/meta/void_t.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/output/binary_writer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/output/output_adapters.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/output/serializer.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/string_concat.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/string_escape.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/detail/value_t.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/json.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/json_fwd.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/ordered_map.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/thirdparty/hedley/hedley.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/include/nlohmann/thirdparty/hedley/hedley_undef.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/nlohmann-json/copyright" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/nlohmann-json/usage" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/nlohmann-json/vcpkg.spdx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/nlohmann-json/vcpkg_abi_info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/nlohmann_json/nlohmann_json.natvis" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfig.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/nlohmann_json/nlohmann_jsonConfigVersion.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/nlohmann_json/nlohmann_jsonTargets.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/pkgconfig/nlohmann_json.pc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake-config/copyright" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake-config/vcpkg-port-config.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake-config/vcpkg.spdx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake-config/vcpkg_abi_info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake-config/vcpkg_cmake_config_fixup.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake/copyright" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg-port-config.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg.spdx.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg_abi_info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg_cmake_build.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg_cmake_configure.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug.bak/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg_cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Enemy/Flying Locust.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/Enemy/Magma Crab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/data/levels/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/levels/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/data/towers.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/towers.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/map-tileset/project.tiled-session" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map-tileset/project.tiled-session" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-90723c794598c8f3e0a0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-78987f8851625a1f540f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-4eae8d93700a83d693c4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-02-21T09-52-08-0744.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-tower_defense-Debug-60695904cc9acc8d180c.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/main.cpp.obj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Game.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Menu.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Menu.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Play.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Play.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/emenys.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/towers.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/towers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Cloud-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Cloud-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Cloud-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Enemy/Flying Locust.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Enemy/Magma Crab.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 01 - Projectile - Impact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 01 - Projectile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 01 - Weapon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 02 - Projectile - Impact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 02 - Projectile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 02 - Weapon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 03 - Projectile - Impact.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 03 - Projectile.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/Weapons/Tower 04/PNGs/Tower 04 - Level 03 - Weapon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/bird.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/button-ezgif.com-gif-maker.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/item.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/item.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/pipe_bot.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/images/pipe_top.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/map-tileset/project.tiled-session" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/map-tileset/project.tiled-session" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/tower_defense.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tower_defense.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vcpkg-manifest-install.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vcpkg-manifest-install.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vcpkg_installed/vcpkg/status" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vcpkg_installed/vcpkg/status" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vcpkg_installed/x64-windows/share/nlohmann-json/vcpkg.spdx.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vcpkg_installed/x64-windows/share/nlohmann-json/vcpkg.spdx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vcpkg_installed/x64-windows/share/vcpkg-cmake-config/vcpkg.spdx.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vcpkg_installed/x64-windows/share/vcpkg-cmake-config/vcpkg.spdx.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg.spdx.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vcpkg_installed/x64-windows/share/vcpkg-cmake/vcpkg.spdx.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Play.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Play.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Play.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Play.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playTowers.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/playTower.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tower.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tower.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TowerManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TowerManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playTower.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/playTower.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +600,14 @@
       <workItem from="1742448299889" duration="888000" />
       <workItem from="1742494030821" duration="7293000" />
       <workItem from="1742589298305" duration="5902000" />
-      <workItem from="1742651076573" duration="10000" />
+      <workItem from="1742651076573" duration="669000" />
+      <workItem from="1742760700159" duration="1329000" />
+      <workItem from="1742762065629" duration="3587000" />
+      <workItem from="1742968861258" duration="4041000" />
+      <workItem from="1743573547264" duration="2243000" />
+      <workItem from="1744184089498" duration="301000" />
+      <workItem from="1744260148709" duration="76000" />
+      <workItem from="1744566470919" duration="2000" />
     </task>
     <task id="LOCAL-00001" summary="19/02/2024">
       <option name="closed" value="true" />
@@ -315,7 +721,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742156746398</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="22/03/2024">
+      <option name="closed" value="true" />
+      <created>1742651110129</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1742651110129</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +758,7 @@
     <MESSAGE value="07/03/2024" />
     <MESSAGE value="09/03/2024" />
     <MESSAGE value="17/03/2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="17/03/2024" />
+    <MESSAGE value="22/03/2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="22/03/2024" />
   </component>
 </project>

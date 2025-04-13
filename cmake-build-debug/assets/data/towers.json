@@ -6,6 +6,7 @@
       "image": "assets/images/Towers/Tower 01.png",
       "cost": [100, 200, 300],
       "damage": [10, 20, 30],
+      "range": [100, 150, 200],
       "attack_speed": [1.0, 0.8, 0.6],
       "levels": [
         {
@@ -58,6 +59,7 @@
       "image": "assets/images/Towers/Tower 02.png",
       "cost": [100, 200, 300],
       "damage": [10, 20, 30],
+      "range": [100, 150, 200],
       "attack_speed": [1.0, 0.8, 0.6],
       "levels": [
         {
@@ -131,6 +133,7 @@
       "image": "assets/images/Towers/Tower 03.png",
       "cost": [100, 200, 300],
       "damage": [10, 20, 30],
+      "range": [100, 150, 200],
       "attack_speed": [1.0, 0.8, 0.6],
       "levels": [
         {
@@ -204,6 +207,7 @@
       "image": "assets/images/Towers/Tower 04.png",
       "cost": [100, 200, 300],
       "damage": [10, 20, 30],
+      "range": [100, 150, 200],
       "attack_speed": [1.0, 0.8, 0.6],
       "levels": [
         {
@@ -277,6 +281,7 @@
       "image": "assets/images/Towers/Tower 05.png",
       "cost": [100, 200, 300],
       "damage": [10, 20, 30],
+      "range": [100, 150, 200],
       "attack_speed": [1.0, 0.8, 0.6],
       "levels": [
         {
@@ -350,6 +355,7 @@
       "image": "assets/images/Towers/Tower 06.png",
       "cost": [100, 200, 300],
       "damage": [10, 20, 30],
+      "range": [100, 150, 200],
       "attack_speed": [1.0, 0.8, 0.6],
       "levels": [
         {
@@ -423,6 +429,7 @@
       "image": "assets/images/Towers/Tower 07.png",
       "cost": [100, 200, 300],
       "damage": [10, 20, 30],
+      "range": [100, 150, 200],
       "attack_speed": [1.0, 0.8, 0.6],
       "levels": [
         {
@@ -496,6 +503,7 @@
       "image": "assets/images/Towers/Tower 08.png",
       "cost": [100, 200, 300],
       "damage": [10, 20, 30],
+      "range": [100, 150, 200],
       "attack_speed": [1.0, 0.8, 0.6],
       "levels": [
         {

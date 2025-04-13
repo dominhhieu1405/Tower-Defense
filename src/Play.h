@@ -65,6 +65,9 @@ private:
     void spawnEnemy();
     void moveEnemies();
     void renderEnemies();
+
+    void movePlayTowers();
+    void renderPlayTowers();
 };
 
 #endif

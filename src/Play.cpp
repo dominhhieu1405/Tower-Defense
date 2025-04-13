@@ -297,7 +297,6 @@ void Play::spawnEnemy() {
         }
     }
 }
-
 void Play::moveEnemies() {
     // spped = 1 là đi 64px / giây
     // cứ 1/8s thì di chuyển 8px
@@ -311,19 +310,45 @@ void Play::moveEnemies() {
     // 180 độ: Lên trên
     // 270 độ: Trái qua phải
 
-
     for (int i = 0; i < (int) enemies.size(); i++) {
         playEnemy& enemy = enemies[i];
         if (enemy.status == 1) {
             Uint32 now = SDL_GetTicks();
 
             // kiểm tra hướng đi
-
             if (enemy.rotation >= 360) {
                 enemy.rotation = enemy.rotation % 360;
             }
+
             // Kiểm tra xem ô hiện tại có phải ô cuối cùng không
             int totalPath = levelData["paths"][enemy.path].size();
+
+            if(enemy.pathIndex == totalPath - 1) {
+                // kiểm tra ID của tile ô cuối
+                int tileIndex = mapData[enemy.tileY][enemy.tileX];
+
+                if (tileIndex == 87) {
+                    if (enemy.x <= (enemy.tileX) * TILE_SIZE) {
+                        enemy.status = -1;
+                        lives--;
+                    }
+                } else if (tileIndex == 184) {
+                    if (enemy.x >= (enemy.tileX + 1) * TILE_SIZE) {
+                        enemy.status = -1;
+                        lives--;
+                    }
+                } else if (tileIndex == 70) {
+                    if (enemy.y <= (enemy.tileY) * TILE_SIZE) {
+                        enemy.status = -1;
+                        lives--;
+                    }
+                } else { // tileIndex == 89
+                    if (enemy.y >= (enemy.tileY) * TILE_SIZE) {
+                        enemy.status = -1;
+                        lives--;
+                    }
+                }
+            }
             if (enemy.pathIndex < totalPath - 1) {
                 int nextTileX = levelData["paths"][enemy.path][enemy.pathIndex + 1]["x"];
                 int nextTileY = levelData["paths"][enemy.path][enemy.pathIndex + 1]["y"];
@@ -342,36 +367,22 @@ void Play::moveEnemies() {
                 } else {
                     nextRotation = 180;
                 }
-                // Nếu rotaion = 90 và x <= enemy tileX * TILE_SIZE      |
-                // hoặc rotation = 270 và x >= enemy tileX * TILE_SIZE   |  -> bắt đầu quay
-                // hoặc rotation = 0 và y >= enemy tileY * TILE_SIZE     |
-                // hoặc rotation = 180 và y <= enemy tileY * TILE_SIZE   |
-                if ((enemy.tmpRotation == 90 && enemy.x >= nextTileX * TILE_SIZE) ||
-                    (enemy.tmpRotation == 270 && enemy.x <= nextTileX * TILE_SIZE) ||
+
+                if ((enemy.tmpRotation == 90 && enemy.x >= (nextTileX-1) * TILE_SIZE) ||
+                    (enemy.tmpRotation == 270 && enemy.x <= (nextTileX+1) * TILE_SIZE) ||
                     (enemy.tmpRotation == 0 && enemy.y <= nextTileY * TILE_SIZE) ||
                     (enemy.tmpRotation == 180 && enemy.y >= nextTileY * TILE_SIZE)) {
 
                     if (now - enemy.lastMove >= 30 && enemy.rotation != nextRotation) {
                         SDL_Log("Quay hướng mới: %d => %d", enemy.tmpRotation, nextRotation);
-                        if (enemy.tmpRotation == 90 || enemy.tmpRotation == 180) {
-                            if (nextRotation > enemy.rotation) {
-                                enemy.rotation += 9;
-                            } else {
-                                enemy.rotation -= 9;
-                            }
-                        } else if (enemy.tmpRotation == 0) {
-                            if (nextRotation == 270) {
-                                enemy.rotation -= 9 + 360;
-                            } else {
-                                enemy.rotation += 9;
-                            }
-                        } else if (enemy.tmpRotation == 270) {
-                            if (nextRotation == 0) {
-                                enemy.rotation += 9;
-                            } else {
-                                enemy.rotation -= 9;
-                            }
+                        if ((enemy.tmpRotation == 90 && nextRotation == 180) || (enemy.tmpRotation == 180 && nextRotation == 270) ||
+                            (enemy.tmpRotation == 270 && nextRotation == 0) || (enemy.tmpRotation == 0 && nextRotation == 90)) {
+                            enemy.rotation += 9;
+                        } else {
+                            enemy.rotation -= 9;
                         }
+
+                        enemy.lastMove = now;
 
                         // Kiểm tra xem đã quay đúng hướng chưa
                         if (enemy.rotation == nextRotation) {
@@ -380,34 +391,44 @@ void Play::moveEnemies() {
                             enemy.pathIndex++;
                             enemy.tmpRotation = enemy.rotation;
                         }
-
                     }
-
                 }
 
-            }
+                if (enemy.rotation < 0) {
+                    enemy.rotation += 360;
+                }
 
-            if (now - enemy.lastMove >= 62 && enemy.rotation % 90 == 0) {
-                enemy.lastMove = now;
+                if (now - enemy.lastMove >= 62 && enemy.rotation % 90 == 0) {
+                    enemy.lastMove = now;
 
-                // tốc độ mỗi 125ms
-                double speed = enemy.speed * 4.0;
-                int moveSpeed = (int) speed;
+                    // tốc độ mỗi 125ms
+                    double speed = enemy.speed * 4.0;
+                    int moveSpeed = (int) speed;
 
-                if (enemy.rotation == 0) {
-                    enemy.y += moveSpeed;
-                } else if (enemy.rotation == 90) {
-                    enemy.x -= moveSpeed;
-                } else if (enemy.rotation == 180) {
-                    enemy.y -= moveSpeed;
-                } else if (enemy.rotation == 270) {
-                    enemy.x += moveSpeed;
+
+                    if (enemy.rotation == 0) {
+                        enemy.y += moveSpeed;
+                    } else if (enemy.rotation == 90) {
+                        enemy.x -= moveSpeed;
+                    } else if (enemy.rotation == 180) {
+                        enemy.y -= moveSpeed;
+                    } else if (enemy.rotation == 270) {
+                        enemy.x += moveSpeed;
+                    }
+
+                    // Cập nhật pathIndex nếu đã đến gần trung tâm ô tiếp theo
+                    if (abs(enemy.x - nextTileX * TILE_SIZE) < moveSpeed && abs(enemy.y - nextTileY * TILE_SIZE) < moveSpeed) {
+                        enemy.tileX = nextTileX;
+                        enemy.tileY = nextTileY;
+                        enemy.pathIndex++;
+                    }
                 }
 
             }
         }
     }
 }
+
 
 void Play::renderEnemies() {
     for (int i = 0; i < (int) enemies.size(); i++) {
@@ -419,6 +440,40 @@ void Play::renderEnemies() {
             SDL_Rect enemyDest = {enemy.x - 64, enemy.y, TILE_SIZE, TILE_SIZE};
             // Quay 90 độ
             SDL_RenderCopyEx(renderer, enemy.enemy->texture, &enemySrc, &enemyDest, enemy.rotation, NULL, SDL_FLIP_NONE);
+        }
+    }
+}
+
+void Play::movePlayTowers() {
+
+}
+
+void Play::renderPlayTowers() {
+    for (const auto& tower : towers) {
+        SDL_Rect towerSrc = {0 * tower.level, 0, 64, 128}; // Lấy frame theo level
+        // Vì tower height = 128 nên đặt lên trên 1 tile
+        SDL_Rect towerDest = {
+                tower.x * TILE_SIZE,
+                tower.y * TILE_SIZE - 64, // Chống lên trên 1 tile
+                64, 128
+        };
+        SDL_RenderCopy(renderer, tower.tower->texture, &towerSrc, &towerDest);
+
+        // Lấy weapon của Level 1 (hoặc level hiện tại)
+        const TowerLevel& level = tower.tower->levels[tower.level];
+        if (level.weapon.path != "") {
+            int weaponWidth = level.weapon.frameWidth / level.weapon.frameCount;
+            int weaponHeight = level.weapon.frameHeight;
+
+            //SDL_Rect weaponSrc = {(currentFrame % level.weapon.frameCount) * weaponWidth, 0, weaponWidth, weaponHeight};
+            SDL_Rect weaponSrc = {0, 0, weaponWidth, weaponHeight};
+            SDL_Rect weaponDest = {
+                    towerDest.x + (towerDest.w - weaponWidth) / 2,
+                    towerDest.y,  // Chống lên tower
+                    weaponWidth, weaponHeight
+            };
+
+            SDL_RenderCopy(renderer, level.weapon.texture, &weaponSrc, &weaponDest);
         }
     }
 }
@@ -516,33 +571,8 @@ void Play::render() {
 
 
     // Vẽ các tower đã đặt
-    for (const auto& tower : towers) {
-        SDL_Rect towerSrc = {0 * tower.level, 0, 64, 128}; // Lấy frame theo level
-        // Vì tower height = 128 nên đặt lên trên 1 tile
-        SDL_Rect towerDest = {
-                tower.x * TILE_SIZE,
-                tower.y * TILE_SIZE - 64, // Chống lên trên 1 tile
-                64, 128
-        };
-        SDL_RenderCopy(renderer, tower.tower->texture, &towerSrc, &towerDest);
-
-        // Lấy weapon của Level 1 (hoặc level hiện tại)
-        const TowerLevel& level = tower.tower->levels[tower.level];
-        if (level.weapon.path != "") {
-            int weaponWidth = level.weapon.frameWidth / level.weapon.frameCount;
-            int weaponHeight = level.weapon.frameHeight;
-
-            //SDL_Rect weaponSrc = {(currentFrame % level.weapon.frameCount) * weaponWidth, 0, weaponWidth, weaponHeight};
-            SDL_Rect weaponSrc = {0, 0, weaponWidth, weaponHeight};
-            SDL_Rect weaponDest = {
-                    towerDest.x + (towerDest.w - weaponWidth) / 2,
-                    towerDest.y,  // Chống lên tower
-                    weaponWidth, weaponHeight
-            };
-
-            SDL_RenderCopy(renderer, level.weapon.texture, &weaponSrc, &weaponDest);
-        }
-    }
+    movePlayTowers();
+    renderPlayTowers();
 
 
     // Vẽ bản sao Tower nếu đang kéo

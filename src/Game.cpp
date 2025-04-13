@@ -3,8 +3,7 @@
 #include "LevelSelect.h"
 #include "Play.h"
 #include "Leaderboard.h"
-#include "TowerManager.cpp"
-#include "EnemyManager.cpp"
+
 
 Game::Game() : window(nullptr), renderer(nullptr), isRunning(true), currentState(MENU), menu(nullptr) {}
 
