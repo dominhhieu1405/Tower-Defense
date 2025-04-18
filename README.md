@@ -156,7 +156,7 @@ Bạn kéo thả thap vào ô cần đặt. Nếu không đủ tiền mua hoặc
 
 Sau khi đặt tháp sẽ hiển thị trên bản đồ.
 <div style="text-align: center;">
-
+ 
 ![image](preview/tower.png)
 </div>
 Khi bạn nhấn vào tháp, sẽ hiện ra vòng tròn màu xanh, các vị trí trong vòng tròn này là các vị trí mà tháp có thể bắn được. Tháp sẽ tự động bắn vào kẻ địch trong vòng tròn này.<br/>
@@ -190,16 +190,16 @@ Có 8 loại tháp, mỗi loại tháp có 3 level. Khi mua thì tháp sẽ là 
 
 - Có 8 loại kẻ địch, mỗi loại có 3 level.
 
-|         Ảnh         | Tên            |       Máu       |      Tốc chạy      |  Phần thưởng  |
-|:-------------------:|:---------------|:---------------:|:------------------:|:-------------:|
-| ![](preview/e1.png) | Giáp Kẹp Trùng | 120 / 180 / 240 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
-| ![](preview/e2.png) | Tiểu Cường     | 150 / 225 / 300 | 0.75 → 0.75 → 0.75 | 25 → 75 → 150 |
-| ![](preview/e3.png) | Hỏa Phong      | 130 / 195 / 260 |  0.9 → 0.9 → 0.9   | 25 → 75 → 150 |
-| ![](preview/e4.png) | Phi Hoàng      | 120 / 180 / 240 |     1 → 1 → 1      | 25 → 75 → 150 |
-| ![](preview/e5.png) | Diệp Trùng     | 110 / 165 / 220 |  0.5 → 0.6 → 0.6   | 25 → 75 → 150 |
-| ![](preview/e6.png) | Nham Tước      | 160 / 240 / 320 | 0.4 → 0.55 → 0.55  | 25 → 75 → 150 |
-| ![](preview/e7.png) | Thiết Long     | 180 / 240 / 360 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
-| ![](preview/e8.png) | Hư Điệp        | 100 / 200 / 300 |  1.1 → 1.1 → 1.1   | 25 → 75 → 150 |
+|         Ảnh          | Tên            |       Máu       |      Tốc chạy      |  Phần thưởng  |
+|:--------------------:|:---------------|:---------------:|:------------------:|:-------------:|
+| ![](preview/e1.gif)  | Giáp Kẹp Trùng | 120 / 180 / 240 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
+| ![](preview/e2.gif)  | Tiểu Cường     | 150 / 225 / 300 | 0.75 → 0.75 → 0.75 | 25 → 75 → 150 |
+| ![](preview/e3.gif)  | Hỏa Phong      | 130 / 195 / 260 |  0.9 → 0.9 → 0.9   | 25 → 75 → 150 |
+| ![](preview/e4.gif)  | Phi Hoàng      | 120 / 180 / 240 |     1 → 1 → 1      | 25 → 75 → 150 |
+| ![](preview/e5.gif)  | Diệp Trùng     | 110 / 165 / 220 |  0.5 → 0.6 → 0.6   | 25 → 75 → 150 |
+| ![](preview/e6.gif)  | Nham Tước      | 160 / 240 / 320 | 0.4 → 0.55 → 0.55  | 25 → 75 → 150 |
+| ![](preview/e7.gif)  | Thiết Long     | 180 / 240 / 360 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
+| ![](preview/e8.gif)  | Hư Điệp        | 100 / 200 / 300 |  1.1 → 1.1 → 1.1   | 25 → 75 → 150 |
 
 # 5. Chiến thắng và thất bại
 

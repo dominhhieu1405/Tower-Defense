@@ -188,14 +188,14 @@ There are 8 types of enemies, each with 3 levels.
 
 |        Image        | Name           | Health          | Speed              |    Reward     |
 |:-------------------:|:---------------|:----------------|:-------------------|:-------------:|
-| ![](preview/e1.png) | Armored Beetle | 120 / 180 / 240 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
-| ![](preview/e2.png) | Mini Brute     | 150 / 225 / 300 | 0.75 → 0.75 → 0.75 | 25 → 75 → 150 |
-| ![](preview/e3.png) | Firestorm      | 130 / 195 / 260 | 0.9 → 0.9 → 0.9    | 25 → 75 → 150 |
-| ![](preview/e4.png) | Sky Phoenix    | 120 / 180 / 240 | 1 → 1 → 1          | 25 → 75 → 150 |
-| ![](preview/e5.png) | Leaf Crawler   | 110 / 165 / 220 | 0.5 → 0.6 → 0.6    | 25 → 75 → 150 |
-| ![](preview/e6.png) | Magma Wasp     | 160 / 240 / 320 | 0.4 → 0.55 → 0.55  | 25 → 75 → 150 |
-| ![](preview/e7.png) | Iron Dragon    | 180 / 240 / 360 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
-| ![](preview/e8.png) | Phantom Moth   | 100 / 200 / 300 | 1.1 → 1.1 → 1.1    | 25 → 75 → 150 |
+| ![](preview/e1.gif) | Armored Beetle | 120 / 180 / 240 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
+| ![](preview/e2.gif) | Mini Brute     | 150 / 225 / 300 | 0.75 → 0.75 → 0.75 | 25 → 75 → 150 |
+| ![](preview/e3.gif) | Firestorm      | 130 / 195 / 260 | 0.9 → 0.9 → 0.9    | 25 → 75 → 150 |
+| ![](preview/e4.gif) | Sky Phoenix    | 120 / 180 / 240 | 1 → 1 → 1          | 25 → 75 → 150 |
+| ![](preview/e5.gif) | Leaf Crawler   | 110 / 165 / 220 | 0.5 → 0.6 → 0.6    | 25 → 75 → 150 |
+| ![](preview/e6.gif) | Magma Wasp     | 160 / 240 / 320 | 0.4 → 0.55 → 0.55  | 25 → 75 → 150 |
+| ![](preview/e7.gif) | Iron Dragon    | 180 / 240 / 360 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
+| ![](preview/e8.gif) | Phantom Moth   | 100 / 200 / 300 | 1.1 → 1.1 → 1.1    | 25 → 75 → 150 |
 
 # 5. Victory and Defeat
 
