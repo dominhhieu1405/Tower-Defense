@@ -31,7 +31,7 @@
   "stages": [
     {
       "name": "Stage 1",
-      "time": 15,
+      "time": 0,
       "total": 5,
       "enemies": [
         { "id": 101, "enemy": 0, "level": 0, "time": 0, "path": 0, "rotation": 90 },

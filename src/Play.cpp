@@ -629,7 +629,7 @@ void Play::moveEnemies() {
 
             // Dựa vào ID của tile ô cuối để cho enemy ra khỏi màn hình (vượt qua ranh giới tile)
             int tileIndex = mapData[enemy.tileY][enemy.tileX];
-            SDL_Log("Tile index: %d", tileIndex);
+            //SDL_Log("Tile index: %d", tileIndex);
 
             if ((tileIndex == 87 && enemy.x <= (enemy.tileX - 1) * TILE_SIZE) ||
                 (tileIndex == 72 && enemy.x >= (enemy.tileX + 1) * TILE_SIZE) ||

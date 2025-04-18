@@ -38,7 +38,8 @@ include_directories(
 file(GLOB SOURCES "src/*.cpp")
 
 # Tạo file thực thi
-add_executable(tower_defense ${SOURCES} ${APP_ICON_RESOURCE_WINDOWS})
+# add_executable(tower_defense ${SOURCES} ${APP_ICON_RESOURCE_WINDOWS}) # Hiện cmd khi chạy
+add_executable(tower_defense WIN32 ${SOURCES} ${APP_ICON_RESOURCE_WINDOWS}) # Không hiện cmd khi chạy
 
 # Thêm thư viện JSON
 find_package(nlohmann_json CONFIG REQUIRED)

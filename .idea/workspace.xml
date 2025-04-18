@@ -24,80 +24,323 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b91ede2-0053-4bac-bd32-ab27ed627ce2" name="Changes" comment="14/04/2024">
-      <change afterPath="$PROJECT_DIR$/assets/audios/10s.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audios/3s.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audios/Defeat.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audios/FirstBlood.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audios/QuetSach1.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audios/QuetSach2.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/audios/Victory.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/levels/2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/levels/3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/levels/4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/levels/5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/levels/6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/levels/7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/levels/8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/data/levels/9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Projectile.bk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/defeat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/victory.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map2+4.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map3.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map5.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map6.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map7.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map8.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map9.tmx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/maps/2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/maps/3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/maps/4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/maps/5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/maps/6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/maps/7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/maps/8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/maps/9.json" afterDir="false" />
+    <list default="true" id="6b91ede2-0053-4bac-bd32-ab27ed627ce2" name="Changes" comment="18/04/2024">
+      <change afterPath="$PROJECT_DIR$/README_en.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/10s.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/3s.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/Defeat.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/FirstBlood.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/QuetSach1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/QuetSach2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/Victory.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/background.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/background.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/click.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/click.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/test.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/audios/thud.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/enemies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels/1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels/2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels/3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels/4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels/5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels/6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels/7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels/8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/levels/9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/data/towers.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/fonts/font.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/fonts/wood.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/icon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/icon.rc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Buttons/Blue_Buttons_Pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Buttons/Brown_Buttons_Pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Buttons/Gray_Buttons_Pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Buttons/Green_Buttons_Pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Buttons/Purple_Buttons_Pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Buttons/Red_Buttons_Pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Buttons/Yellow_Buttons_Pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Buttons/_READ ME!.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Enemy/Clampbeetle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Enemy/Firebug.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Enemy/Firewasp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Enemy/FlyingLocust.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Enemy/Leafbug.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Enemy/MagmaCrab.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Enemy/Scorpion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Enemy/VoidButterfly.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Tileset/Aseprite/Animated water tiles.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Tileset/Aseprite/Asset Preview - Tileset.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Tileset/Aseprite/Grass Tileset.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Tileset/PNGs/Animated water tiles.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Tileset/PNGs/Grass Tileset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Tileset/Preview/Animated water tiles.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Tileset/Preview/Asset Preview - Tileset.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Tileset/tileset.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Towers/Tower 01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Towers/Tower 02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Towers/Tower 03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Towers/Tower 04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Towers/Tower 05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Towers/Tower 06.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Towers/Tower 07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Towers/Tower 08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Aseprite/Tower 01 - Weapon - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Previews/Tower 01 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Previews/Tower 01 - Weapon - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Projectile.bk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Weapon - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 01 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 02 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 03 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Aseprite/Tower 02 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 01 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 02 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 03 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Previews/Tower 02 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.bak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.bak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.bak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 01 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 02 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 03 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Aseprite/Tower 03 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 01 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 02 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 03 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/GIFs/Tower 03 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 01 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 02 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 03 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 01 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 02 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 03 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Aseprite/Tower 04 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 01 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 02 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 03 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Previews/Tower 04 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 01 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 02 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 03 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 01 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 02 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 03 - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Aseprite/Tower 05 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 01 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 02 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 03 - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Previews/Tower 05 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Weapon - Copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Weapon - Copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Weapon - Copy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Aseprite/Tower 06 - Weapon - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Previews/Tower 06 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Previews/Tower 06 - Weapon - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Weapon - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level X - Projectile - Impact.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Aseprite/Tower 07 - Level X - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level X - Projectile - Impact.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Previews/Tower 07 - Level X - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile - Impact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 01 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 01 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 02 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 02 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 03 - Projectile.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Aseprite/Tower 08 - Level 03 - Weapon.aseprite" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 01 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 01 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 02 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 02 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 03 - Projectile.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/GIFs/Tower 08 - Level 03 - Weapon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 01 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 01 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 02 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 02 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 03 - Projectile.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 03 - Weapon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/defeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/star-off.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/star-on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/images/victory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/frame_49_delay-0.1s.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map1.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map2+4.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map2.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map3.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map4.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map5.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map6.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map7.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map8.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/map9.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/project.tiled-project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/project.tiled-session" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/set.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/set.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/zz.tiled-project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/map-tileset/zz.tiled-session" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/maps/1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/maps/2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/maps/3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/maps/4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/maps/5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/maps/6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/maps/7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/maps/8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stable/20250418.1/assets/maps/9.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/data/enemies.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/enemies.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/data/levels.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/levels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/data/levels/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/levels/1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/data/towers.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/towers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/map-tileset/project.tiled-session" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map-tileset/project.tiled-session" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Game.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Menu.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Menu.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Play.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Play.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/enemies.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/enemies.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels/1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/towers.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/towers.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/map-tileset/project.tiled-session" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/map-tileset/project.tiled-session" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/tower_defense.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tower_defense.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/vcpkg-manifest-install.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vcpkg-manifest-install.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EnemyManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnemyManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LevelSelect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/LevelSelect.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/font.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/stable/20250418.1/assets/fonts/text.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp.bk" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Play.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Play.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Play.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Play.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playBullet.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/playBullet.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playTower.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/playTower.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TowerManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TowerManager.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +424,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.tower_defense">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="copy_resources" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tower_defense" TARGET_NAME="copy_resources" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -262,7 +510,8 @@
       <workItem from="1744807665063" duration="13876000" />
       <workItem from="1744873178584" duration="3334000" />
       <workItem from="1744910460335" duration="20839000" />
-      <workItem from="1744974502595" duration="7599000" />
+      <workItem from="1744974502595" duration="9695000" />
+      <workItem from="1744991576008" duration="8080000" />
     </task>
     <task id="LOCAL-00001" summary="19/02/2024">
       <option name="closed" value="true" />
@@ -400,7 +649,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744581886681</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="18/04/2024">
+      <option name="closed" value="true" />
+      <created>1744985553706</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1744985553706</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,6 +688,7 @@
     <MESSAGE value="17/03/2024" />
     <MESSAGE value="22/03/2024" />
     <MESSAGE value="14/04/2024" />
-    <option name="LAST_COMMIT_MESSAGE" value="14/04/2024" />
+    <MESSAGE value="18/04/2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="18/04/2024" />
   </component>
 </project>

@@ -22,6 +22,7 @@ void TowerManager::loadTowers(SDL_Renderer* renderer, const std::string& filePat
             tower.damage[i] = t["damage"][i];
             tower.attackSpeed[i] = t["attack_speed"][i];
             tower.range[i] = t["range"][i];
+            tower.attackRange[i] = t["range"][i];
         }
 
         // Load hình ảnh tower

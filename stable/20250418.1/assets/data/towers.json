@@ -1,0 +1,596 @@
+{
+  "towers": [
+    {
+      "id": 1,
+      "name": "Tower 01",
+      "image": "assets/images/Towers/Tower 01.png",
+      "cost": [100, 200, 300],
+      "damage": [10, 20, 30],
+      "range": [100, 150, 200],
+      "attack_speed": [1.0, 0.8, 0.6],
+      "levels": [
+        {
+          "level": 1,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Projectile.png",
+            "frame_width": 24,
+            "frame_height": 40,
+            "frame_count": 3
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png",
+            "frame_width": 576,
+            "frame_height": 96,
+            "frame_count": 6
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Weapon - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        },
+        {
+          "level": 2,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 02 - Projectile.png",
+            "frame_width": 45,
+            "frame_height": 40,
+            "frame_count": 3
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 02 - Weapon.png",
+            "frame_width": 576,
+            "frame_height": 96,
+            "frame_count": 6
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Weapon - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        },
+        {
+          "level": 3,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Projectile.png",
+            "frame_width": 66,
+            "frame_height": 40,
+            "frame_count": 3
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Weapon.png",
+            "frame_width": 576,
+            "frame_height": 96,
+            "frame_count": 6
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Weapon - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Tower 02",
+      "image": "assets/images/Towers/Tower 02.png",
+      "cost": [100, 200, 300],
+      "damage": [10, 20, 30],
+      "range": [100, 150, 200],
+      "attack_speed": [1.0, 0.8, 0.6],
+      "levels": [
+        {
+          "level": 1,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Projectile.png",
+            "frame_width": 160,
+            "frame_height": 32,
+            "frame_count": 3
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Weapon.png",
+            "frame_width": 768,
+            "frame_height": 48,
+            "frame_count": 16
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Projectile - Impact.png",
+            "frame_width": 320,
+            "frame_height": 64,
+            "frame_count": 5
+          }
+        },
+        {
+          "level": 2,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Projectile.png",
+            "frame_width": 45,
+            "frame_height": 40,
+            "frame_count": 6
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.png",
+            "frame_width": 1088,
+            "frame_height": 64,
+            "frame_count": 17
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Projectile - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        },
+        {
+          "level": 3,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Projectile.png",
+            "frame_width": 160,
+            "frame_height": 32,
+            "frame_count": 5
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.png",
+            "frame_width": 1280,
+            "frame_height": 64,
+            "frame_count": 19
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Projectile - Impact.png",
+            "frame_width": 448,
+            "frame_height": 64,
+            "frame_count": 7
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Tower 03",
+      "image": "assets/images/Towers/Tower 03.png",
+      "cost": [100, 200, 300],
+      "damage": [10, 20, 30],
+      "range": [100, 150, 200],
+      "attack_speed": [1.0, 0.8, 0.6],
+      "levels": [
+        {
+          "level": 1,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 01 - Projectile.png",
+            "frame_width": 60,
+            "frame_height": 10,
+            "frame_count": 6
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 01 - Weapon.png",
+            "frame_width": 768,
+            "frame_height": 96,
+            "frame_count": 8
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 01 - Projectile - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        },
+        {
+          "level": 2,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 02 - Projectile.png",
+            "frame_width": 60,
+            "frame_height": 10,
+            "frame_count": 6
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 02 - Weapon.png",
+            "frame_width": 768,
+            "frame_height": 96,
+            "frame_count": 8
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 02 - Projectile - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        },
+        {
+          "level": 3,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 03 - Projectile.png",
+            "frame_width": 60,
+            "frame_height": 10,
+            "frame_count": 6
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 03 - Weapon.png",
+            "frame_width": 768,
+            "frame_height": 96,
+            "frame_count": 8
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 03/Spritesheets/Tower 03 - Level 03 - Projectile - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Tower 04",
+      "image": "assets/images/Towers/Tower 04.png",
+      "cost": [100, 200, 300],
+      "damage": [10, 20, 30],
+      "range": [100, 150, 200],
+      "attack_speed": [1.0, 0.8, 0.6],
+      "levels": [
+        {
+          "level": 1,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 01 - Projectile.png",
+            "frame_width": 48,
+            "frame_height": 8,
+            "frame_count": 6
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 01 - Weapon.png",
+            "frame_width": 2176,
+            "frame_height": 128,
+            "frame_count": 17
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 01 - Projectile - Impact.png",
+            "frame_width": 576,
+            "frame_height": 64,
+            "frame_count": 9
+          }
+        },
+        {
+          "level": 2,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 02 - Projectile.png",
+            "frame_width": 90,
+            "frame_height": 12,
+            "frame_count": 6
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 02 - Weapon.png",
+            "frame_width": 2176,
+            "frame_height": 128,
+            "frame_count": 17
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 02 - Projectile - Impact.png",
+            "frame_width": 576,
+            "frame_height": 64,
+            "frame_count": 9
+          }
+        },
+        {
+          "level": 3,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 03 - Projectile.png",
+            "frame_width": 80,
+            "frame_height": 10,
+            "frame_count": 8
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 03 - Weapon.png",
+            "frame_width": 2176,
+            "frame_height": 128,
+            "frame_count": 17
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 04/Spritesheets/Tower 04 - Level 03 - Projectile - Impact.png",
+            "frame_width": 576,
+            "frame_height": 64,
+            "frame_count": 9
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Tower 05",
+      "image": "assets/images/Towers/Tower 05.png",
+      "cost": [100, 200, 300],
+      "damage": [10, 20, 30],
+      "range": [100, 150, 200],
+      "attack_speed": [1.0, 0.8, 0.6],
+      "levels": [
+        {
+          "level": 1,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Projectile.png",
+            "frame_width": 384,
+            "frame_height": 32,
+            "frame_count": 12
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Weapon.png",
+            "frame_width": 2784,
+            "frame_height": 96,
+            "frame_count": 29
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 01 - Projectile - Impact.png",
+            "frame_width": 640,
+            "frame_height": 64,
+            "frame_count": 10
+          }
+        },
+        {
+          "level": 2,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Projectile.png",
+            "frame_width": 768,
+            "frame_height": 64,
+            "frame_count": 12
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Weapon.png",
+            "frame_width": 2784,
+            "frame_height": 96,
+            "frame_count": 29
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 02 - Projectile - Impact.png",
+            "frame_width": 768,
+            "frame_height": 64,
+            "frame_count": 12
+          }
+        },
+        {
+          "level": 3,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Projectile.png",
+            "frame_width": 1152,
+            "frame_height": 96,
+            "frame_count": 12
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Weapon.png",
+            "frame_width": 2784,
+            "frame_height": 96,
+            "frame_count": 29
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 05/Spritesheets/Tower 05 - Level 03 - Projectile - Impact.png",
+            "frame_width": 1152,
+            "frame_height": 96,
+            "frame_count": 12
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Tower 06",
+      "image": "assets/images/Towers/Tower 06.png",
+      "cost": [100, 200, 300],
+      "damage": [10, 20, 30],
+      "range": [100, 150, 200],
+      "attack_speed": [1.0, 0.8, 0.6],
+      "levels": [
+        {
+          "level": 1,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 01 - Projectile.png",
+            "frame_width": 18,
+            "frame_height": 26,
+            "frame_count": 3
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 01 - Weapon.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Weapon - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        },
+        {
+          "level": 2,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 02 - Projectile.png",
+            "frame_width": 32,
+            "frame_height": 34,
+            "frame_count": 4
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 02 - Weapon.png",
+            "frame_width": 576,
+            "frame_height": 96,
+            "frame_count": 6
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Weapon - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        },
+        {
+          "level": 3,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 03 - Projectile.png",
+            "frame_width": 40,
+            "frame_height": 37,
+            "frame_count": 4
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Level 03 - Weapon.png",
+            "frame_width": 576,
+            "frame_height": 96,
+            "frame_count": 6
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 06/Spritesheets/Tower 06 - Weapon - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Tower 07",
+      "image": "assets/images/Towers/Tower 07.png",
+      "cost": [100, 200, 300],
+      "damage": [10, 20, 30],
+      "range": [100, 150, 200],
+      "attack_speed": [1.0, 0.8, 0.6],
+      "levels": [
+        {
+          "level": 1,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile.png",
+            "frame_width": 356,
+            "frame_height": 32,
+            "frame_count": 8
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level 01 - Weapon.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile - Impact.png",
+            "frame_width": 576,
+            "frame_height": 64,
+            "frame_count": 9
+          }
+        },
+        {
+          "level": 2,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile.png",
+            "frame_width": 356,
+            "frame_height": 32,
+            "frame_count": 8
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level 02 - Weapon.png",
+            "frame_width": 448,
+            "frame_height": 64,
+            "frame_count": 7
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile - Impact.png",
+            "frame_width": 576,
+            "frame_height": 64,
+            "frame_count": 9
+          }
+        },
+        {
+          "level": 3,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile.png",
+            "frame_width": 356,
+            "frame_height": 32,
+            "frame_count": 8
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level 03 - Weapon.png",
+            "frame_width": 576,
+            "frame_height": 64,
+            "frame_count": 9
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 07/Spritesheets/Tower 07 - Level X - Projectile - Impact.png",
+            "frame_width": 576,
+            "frame_height": 64,
+            "frame_count": 9
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Tower 08",
+      "image": "assets/images/Towers/Tower 08.png",
+      "cost": [100, 200, 300],
+      "damage": [10, 20, 30],
+      "range": [100, 150, 200],
+      "attack_speed": [1.0, 0.8, 0.6],
+      "levels": [
+        {
+          "level": 1,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 01 - Projectile.png",
+            "frame_width": 1792,
+            "frame_height": 256,
+            "frame_count": 7
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 01 - Weapon.png",
+            "frame_width": 480,
+            "frame_height": 48,
+            "frame_count": 10
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 01 - Projectile - Impact.png",
+            "frame_width": 320,
+            "frame_height": 64,
+            "frame_count": 5
+          }
+        },
+        {
+          "level": 2,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 02 - Projectile.png",
+            "frame_width": 3840,
+            "frame_height": 320,
+            "frame_count": 12
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 02 - Weapon.png",
+            "frame_width": 480,
+            "frame_height": 48,
+            "frame_count": 10
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Projectile - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        },
+        {
+          "level": 3,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 03 - Projectile.png",
+            "frame_width": 5440,
+            "frame_height": 320,
+            "frame_count": 17
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 03 - Weapon.png",
+            "frame_width": 640,
+            "frame_height": 64,
+            "frame_count": 10
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Projectile - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        }
+      ]
+    }
+  ]
+}
