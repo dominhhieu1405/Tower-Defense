@@ -41,7 +41,7 @@ void EnemyManager::loadEnemy(SDL_Renderer* renderer, const std::string& filePath
         enemies.push_back(enemy);
     }
 
-    std::cout << "✅ Loaded " << enemies.size() << " enemy successfully!" << std::endl;
+    std::cout << " - Loaded " << enemies.size() << " enemy successfully!" << std::endl;
 }
 
 void EnemyManager::freeTextures() {
@@ -54,5 +54,5 @@ void EnemyManager::freeTextures() {
 
         //}
     }
-    std::cout << "✅ Freed tower textures!" << std::endl;
+    std::cout << " -  Freed tower textures!" << std::endl;
 }

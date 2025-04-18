@@ -1,0 +1,166 @@
+{
+  "id": 6,
+  "name": "Level 6",
+  "map": "6.json",
+  "total": 40,
+  "totalStage": 4,
+  "paths": [
+    [
+      { "x": 19, "y": 1 },
+      { "x": 18, "y": 1 },
+      { "x": 17, "y": 1 },
+      { "x": 16, "y": 1 },
+
+      { "x": 16, "y": 2 },
+      { "x": 16, "y": 3 },
+      { "x": 16, "y": 4 },
+      { "x": 16, "y": 5 },
+      { "x": 16, "y": 6 },
+      { "x": 16, "y": 7 },
+
+      { "x": 15, "y": 7 },
+      { "x": 14, "y": 7 },
+      { "x": 13, "y": 7 },
+      { "x": 12, "y": 7 },
+
+      { "x": 12, "y": 6 },
+      { "x": 12, "y": 5 },
+      { "x": 12, "y": 4 },
+      { "x": 12, "y": 3 },
+      { "x": 12, "y": 2 },
+      { "x": 12, "y": 1 },
+
+      { "x": 11, "y": 1 },
+      { "x": 10, "y": 1 },
+      { "x": 9, "y": 1 },
+      { "x": 8, "y": 1 },
+      { "x": 7, "y": 1 },
+      { "x": 6, "y": 1 },
+      { "x": 5, "y": 1 },
+      { "x": 4, "y": 1 },
+
+      { "x": 4, "y": 2 },
+      { "x": 4, "y": 3 },
+      { "x": 4, "y": 4 },
+      { "x": 4, "y": 5 },
+      { "x": 4, "y": 6 },
+
+      { "x": 3, "y": 6 },
+      { "x": 2, "y": 6 },
+      { "x": 1, "y": 6 },
+      { "x": 0, "y": 6 }
+    ],
+    [
+      { "x": 0, "y": 9 },
+      { "x": 1, "y": 9 },
+      { "x": 2, "y": 9 },
+      { "x": 3, "y": 9 },
+      { "x": 4, "y": 9 },
+      { "x": 5, "y": 9 },
+      { "x": 6, "y": 9 },
+
+      { "x": 6, "y": 8 },
+      { "x": 6, "y": 7 },
+      { "x": 6, "y": 6 },
+      { "x": 6, "y": 5 },
+      { "x": 6, "y": 4 },
+
+      { "x": 7, "y": 4 },
+      { "x": 8, "y": 4 },
+      { "x": 9, "y": 4 },
+
+      { "x": 9, "y": 5 },
+      { "x": 9, "y": 6 },
+      { "x": 9, "y": 7 },
+      { "x": 9, "y": 8 },
+      { "x": 9, "y": 9 },
+
+      { "x": 10, "y": 9 },
+      { "x": 11, "y": 9 },
+      { "x": 12, "y": 9 },
+      { "x": 13, "y": 9 },
+      { "x": 14, "y": 9 },
+      { "x": 15, "y": 9 },
+      { "x": 16, "y": 9 },
+      { "x": 17, "y": 9 },
+      { "x": 18, "y": 9 },
+
+      { "x": 18, "y": 8 },
+      { "x": 18, "y": 7 },
+      { "x": 18, "y": 6 },
+      { "x": 18, "y": 5 },
+
+      { "x": 19, "y": 5 }
+    ]
+  ],
+  "stages": [
+    {
+      "name": "Stage 1",
+      "time": 15,
+      "total": 10,
+      "enemies": [
+        { "id": 101, "enemy": 0, "level": 1, "time": 0, "path": 0, "rotation": 90 },
+        { "id": 102, "enemy": 0, "level": 1, "time": 2, "path": 0, "rotation": 90 },
+        { "id": 103, "enemy": 0, "level": 1, "time": 4, "path": 0, "rotation": 90 },
+        { "id": 104, "enemy": 0, "level": 1, "time": 6, "path": 0, "rotation": 90 },
+        { "id": 105, "enemy": 0, "level": 1, "time": 8, "path": 0, "rotation": 90 },
+        { "id": 106, "enemy": 1, "level": 1, "time": 10, "path": 0, "rotation": 90 },
+        { "id": 107, "enemy": 1, "level": 1, "time": 12, "path": 0, "rotation": 90 },
+        { "id": 108, "enemy": 1, "level": 1, "time": 14, "path": 0, "rotation": 90 },
+        { "id": 109, "enemy": 1, "level": 1, "time": 16, "path": 0, "rotation": 90 },
+        { "id": 110, "enemy": 1, "level": 1, "time": 18, "path": 0, "rotation": 90 }
+      ]
+    },
+    {
+      "name": "Stage 2",
+      "time": 60,
+      "total": 10,
+      "enemies": [
+        { "id": 201, "enemy": 2, "level": 1, "time": 0, "path": 1, "rotation": 270 },
+        { "id": 202, "enemy": 2, "level": 1, "time": 2, "path": 1, "rotation": 270 },
+        { "id": 203, "enemy": 2, "level": 1, "time": 4, "path": 1, "rotation": 270 },
+        { "id": 204, "enemy": 2, "level": 1, "time": 6, "path": 1, "rotation": 270 },
+        { "id": 205, "enemy": 2, "level": 1, "time": 8, "path": 1, "rotation": 270 },
+        { "id": 206, "enemy": 2, "level": 1, "time": 10, "path": 1, "rotation": 270 },
+        { "id": 207, "enemy": 2, "level": 1, "time": 12, "path": 1, "rotation": 270 },
+        { "id": 208, "enemy": 2, "level": 1, "time": 14, "path": 1, "rotation": 270 },
+        { "id": 209, "enemy": 2, "level": 1, "time": 16, "path": 1, "rotation": 270 },
+        { "id": 210, "enemy": 2, "level": 1, "time": 18, "path": 1, "rotation": 270 }
+      ]
+    },
+    {
+      "name": "Stage 3",
+      "time": 100,
+      "total": 10,
+      "enemies": [
+        { "id": 301, "enemy": 3, "level": 1, "time": 0, "path": 0, "rotation": 90 },
+        { "id": 302, "enemy": 3, "level": 1, "time": 0, "path": 1, "rotation": 270 },
+        { "id": 303, "enemy": 3, "level": 1, "time": 3, "path": 0, "rotation": 90 },
+        { "id": 304, "enemy": 3, "level": 1, "time": 3, "path": 1, "rotation": 270 },
+        { "id": 305, "enemy": 3, "level": 1, "time": 6, "path": 0, "rotation": 90 },
+        { "id": 306, "enemy": 3, "level": 1, "time": 6, "path": 1, "rotation": 270 },
+        { "id": 307, "enemy": 3, "level": 1, "time": 9, "path": 0, "rotation": 90 },
+        { "id": 308, "enemy": 3, "level": 1, "time": 9, "path": 1, "rotation": 270 },
+        { "id": 309, "enemy": 3, "level": 1, "time": 12, "path": 0, "rotation": 90 },
+        { "id": 310, "enemy": 3, "level": 1, "time": 12, "path": 1, "rotation": 270 }
+      ]
+    },
+    {
+        "name": "Stage 4",
+        "time": 130,
+        "total": 10,
+        "enemies": [
+            { "id": 401, "enemy": 0, "level": 2, "time": 0, "path": 0, "rotation": 270 },
+            { "id": 402, "enemy": 0, "level": 2, "time": 0, "path": 1, "rotation": 270 },
+            { "id": 403, "enemy": 1, "level": 2, "time": 3, "path": 0, "rotation": 270 },
+            { "id": 404, "enemy": 1, "level": 2, "time": 3, "path": 1, "rotation": 270 },
+            { "id": 405, "enemy": 2, "level": 2, "time": 5, "path": 0, "rotation": 270 },
+            { "id": 406, "enemy": 2, "level": 2, "time": 5, "path": 1, "rotation": 270 },
+            { "id": 407, "enemy": 3, "level": 2, "time": 7.5, "path": 0, "rotation": 270 },
+            { "id": 408, "enemy": 3, "level": 2, "time": 7.5, "path": 1, "rotation": 270 },
+            { "id": 409, "enemy": 4, "level": 1, "time": 10.5, "path": 0, "rotation": 270 },
+            { "id": 410, "enemy": 4, "level": 1, "time": 10.5, "path": 1, "rotation":270 }
+        ]
+    }
+  ]
+}

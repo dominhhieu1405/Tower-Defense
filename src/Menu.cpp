@@ -155,6 +155,19 @@ void Menu::handleEvents(SDL_Event& event) {
                     if (clickSound) {
                         Mix_PlayChannel(-1, clickSound, 0);
                     }
+                    if (i == 0) {
+                        std::ifstream file(game->dataPath);
+                        nlohmann::json jsonData;
+                        file >> jsonData;
+                        file.close();
+                        SDL_Log("Đã đọc dữ liệu từ file: %s", game->dataPath.c_str());
+                        SDL_Log("selectedLevel: %d", jsonData["selectedLevel"].get<int>());
+                        if (jsonData.contains("selectedLevel") && jsonData["selectedLevel"].is_number_integer() && jsonData["selectedLevel"] > 0) {
+                            game->selectedLevel = jsonData["selectedLevel"];
+                            game->currentState = PLAY;
+                        }
+                        //game->openURL("https://github.com/dominhhieu1405/Tower-Defense");
+                    }
                     if (i == 1){
                         game->currentState = LEVEL_SELECT;
                     }

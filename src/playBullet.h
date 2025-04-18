@@ -22,6 +22,7 @@ struct Bullet {
     int frameWidth;     // Chiều rộng mỗi frame
     int frameHeight;    // Chiều cao mỗi frame
     int frameCount;     // Số frame của hoạt ảnh
+    int rotation;      // Góc quay của viên đạn (nếu cần)
 };
 
 #endif //TOWER_DEFENSE_PLAYBULLET_H

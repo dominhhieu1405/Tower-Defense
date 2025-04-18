@@ -3,22 +3,22 @@
     "id": 1,
     "name": "Level 1",
     "unlocked": true,
-    "completed": true,
-    "score": 3,
-    "played": true
+    "completed": false,
+    "score": 0,
+    "played": false
   },
   {
     "id": 2,
     "name": "Level 2",
-    "unlocked": true,
-    "completed": true,
-    "score": 2,
-    "played": true
+    "unlocked": false,
+    "completed": false,
+    "score": 0,
+    "played": false
   },
   {
     "id": 3,
     "name": "Level 3",
-    "unlocked": true,
+    "unlocked": false,
     "completed": false,
     "score": 0,
     "played": false

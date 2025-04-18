@@ -3,6 +3,8 @@
 #include "LevelSelect.h"
 #include "Play.h"
 #include "Leaderboard.h"
+#include <cstdlib>
+
 
 
 Game::Game() : window(nullptr), renderer(nullptr), isRunning(true), currentState(MENU), menu(nullptr) {}
@@ -104,6 +106,19 @@ void Game::run() {
     }
 }
 
+void Game::openURL(const std::string& url) {
+    #if defined(_WIN32)
+        std::string command = "start " + url;
+    #elif defined(__APPLE__)
+        std::string command = "open " + url;
+    #elif defined(__linux__)
+        std::string command = "xdg-open " + url;
+    #else
+        #error "Unsupported OS"
+    #endif
+
+    system(command.c_str());
+}
 
 void Game::handleEvents() {
     SDL_Event event;
@@ -147,6 +162,9 @@ void Game::render() {
 
     if (currentState == MENU) {
         //Menu menu(renderer);
+        if (menu == nullptr) {
+            menu = new Menu(renderer, &isRunning, this);
+        }
         menu->render();
     } else if (currentState == LEVEL_SELECT) {
         levelSelect->render();

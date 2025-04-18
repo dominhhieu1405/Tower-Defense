@@ -20,7 +20,7 @@ LevelSelect::LevelSelect(SDL_Renderer* renderer, bool* isRunning, Game* game)
     font = TTF_OpenFont("assets/fonts/wood.ttf", 32);
     clickSound = Mix_LoadWAV("assets/audios/click.wav");
 
-    loadLevels("assets/data/levels.json");
+    loadLevels(game->levelFile.c_str());
 
     int startX = (1280 - (3 * BUTTON_WIDTH + 2 * BUTTON_SPACING)) / 2;
     int startY = 250 + 50;  // Dưới logo
@@ -54,6 +54,7 @@ void LevelSelect::loadLevels(const char* filename) {
     json levelData;
     file >> levelData;
 
+    levels.clear();
     for (const auto& item : levelData) {
         levels.push_back({
                                  item["id"],

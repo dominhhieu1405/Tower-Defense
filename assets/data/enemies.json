@@ -2,98 +2,98 @@
   "enemy": [
     {
       "id": 1,
-      "name": "Clamp beetle",
+      "name": "Giáp Kẹp Trùng",
       "image": "assets/images/Enemy/Clampbeetle.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "levels": [
         { "id": 11, "name": "Level 1", "health": 120, "speed": 0.6, "reward": 25, "frame": 8 },
-        { "id": 12, "name": "Level 2", "health": 240, "speed": 0.6, "reward": 35, "frame": 8 },
-        { "id": 13, "name": "Level 3", "health": 360, "speed": 0.6, "reward": 50, "frame": 13 }
+        { "id": 12, "name": "Level 2", "health": 180, "speed": 0.75, "reward": 75, "frame": 8 },
+        { "id": 13, "name": "Level 3", "health": 240, "speed": 0.75, "reward": 150, "frame": 13 }
       ]
     },
     {
       "id": 2,
-      "name": "Fire Bug",
+      "name": "Tiểu Cường",
       "image": "assets/images/Enemy/Firebug.png",
       "frameWidth": 128,
       "frameHeight": 64,
       "levels": [
         { "id": 21, "name": "Level 1", "health": 150, "speed": 0.75, "reward": 25, "frame": 6 },
-        { "id": 22, "name": "Level 2", "health": 300, "speed": 0.75, "reward": 35, "frame": 8 },
-        { "id": 23, "name": "Level 3", "health": 450, "speed": 0.75, "reward": 50, "frame": 11 }
+        { "id": 22, "name": "Level 2", "health": 225, "speed": 0.75, "reward": 75, "frame": 8 },
+        { "id": 23, "name": "Level 3", "health": 300, "speed": 0.75, "reward": 150, "frame": 11 }
       ]
     },
     {
       "id": 3,
-      "name": "Fire Wasp",
+      "name": "Hỏa Phong",
       "image": "assets/images/Enemy/Firewasp.png",
       "frameWidth": 96,
-      "frameHeight": 64,
+      "frameHeight": 96,
       "levels": [
         { "id": 31, "name": "Level 1", "health": 130, "speed": 0.9, "reward": 25, "frame": 12 },
-        { "id": 32, "name": "Level 2", "health": 260, "speed": 0.9, "reward": 35, "frame": 8 },
-        { "id": 33, "name": "Level 3", "health": 390, "speed": 0.9, "reward": 50, "frame": 12 }
+        { "id": 32, "name": "Level 2", "health": 195, "speed": 0.9, "reward": 75, "frame": 8 },
+        { "id": 33, "name": "Level 3", "health": 260, "speed": 0.9, "reward": 150, "frame": 12 }
       ]
     },
     {
       "id": 4,
-      "name": "Flying Locust",
+      "name": "Phi Hoàng",
       "image": "assets/images/Enemy/FlyingLocust.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "levels": [
-        { "id": 41, "name": "Level 1", "health": 140, "speed": 1.0, "reward": 25, "frame": 12 },
-        { "id": 42, "name": "Level 2", "health": 280, "speed": 1.0, "reward": 35, "frame": 8 },
-        { "id": 43, "name": "Level 3", "health": 420, "speed": 1.0, "reward": 50, "frame": 14 }
+        { "id": 41, "name": "Level 1", "health": 120, "speed": 1.0, "reward": 25, "frame": 12 },
+        { "id": 42, "name": "Level 2", "health": 180, "speed": 1.0, "reward": 75, "frame": 8 },
+        { "id": 43, "name": "Level 3", "health": 240, "speed": 1.0, "reward": 150, "frame": 14 }
       ]
     },
     {
       "id": 5,
-      "name": "Leaf bug",
+      "name": "Diệp Trùng",
       "image": "assets/images/Enemy/Leafbug.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "levels": [
         { "id": 51, "name": "Level 1", "health": 110, "speed": 0.5, "reward": 25, "frame": 6 },
-        { "id": 52, "name": "Level 2", "health": 220, "speed": 0.5, "reward": 35, "frame": 8 },
-        { "id": 53, "name": "Level 3", "health": 330, "speed": 0.5, "reward": 50, "frame": 7 }
+        { "id": 52, "name": "Level 2", "health": 165, "speed": 0.6, "reward": 75, "frame": 8 },
+        { "id": 53, "name": "Level 3", "health": 220, "speed": 0.6, "reward": 150, "frame": 7 }
       ]
     },
     {
       "id": 6,
-      "name": "Magma Crab",
+      "name": "Nham Tước",
       "image": "assets/images/Enemy/MagmaCrab.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "levels": [
         { "id": 61, "name": "Level 1", "health": 160, "speed": 0.4, "reward": 25, "frame": 8 },
-        { "id": 62, "name": "Level 2", "health": 320, "speed": 0.4, "reward": 35, "frame": 8 },
-        { "id": 63, "name": "Level 3", "health": 480, "speed": 0.4, "reward": 50, "frame": 10 }
+        { "id": 62, "name": "Level 2", "health": 240, "speed": 0.55, "reward": 75, "frame": 8 },
+        { "id": 63, "name": "Level 3", "health": 320, "speed": 0.55, "reward": 150, "frame": 10 }
       ]
     },
     {
       "id": 7,
-      "name": "Scorpion",
+      "name": "Thiết Long",
       "image": "assets/images/Enemy/Scorpion.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "levels": [
         { "id": 71, "name": "Level 1", "health": 180, "speed": 0.6, "reward": 25, "frame": 8 },
-        { "id": 72, "name": "Level 2", "health": 360, "speed": 0.6, "reward": 35, "frame": 8 },
-        { "id": 73, "name": "Level 3", "health": 540, "speed": 0.6, "reward": 50, "frame": 8 }
+        { "id": 72, "name": "Level 2", "health": 270, "speed": 0.75, "reward": 75, "frame": 8 },
+        { "id": 73, "name": "Level 3", "health": 360, "speed": 0.75, "reward": 150, "frame": 8 }
       ]
     },
     {
       "id": 8,
-      "name": "Void Butterfly",
+      "name": "Hư Điệp",
       "image": "assets/images/Enemy/VoidButterfly.png",
       "frameWidth": 64,
       "frameHeight": 64,
       "levels": [
         { "id": 81, "name": "Level 1", "health": 100, "speed": 1.1, "reward": 25, "frame": 6 },
-        { "id": 82, "name": "Level 2", "health": 200, "speed": 1.1, "reward": 35, "frame": 4 },
-        { "id": 83, "name": "Level 3", "health": 300, "speed": 1.1, "reward": 50, "frame": 13 }
+        { "id": 82, "name": "Level 2", "health": 200, "speed": 1.1, "reward": 75, "frame": 4 },
+        { "id": 83, "name": "Level 3", "health": 300, "speed": 1.1, "reward": 150, "frame": 13 }
       ]
     }
   ]

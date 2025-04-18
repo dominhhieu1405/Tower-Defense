@@ -25,44 +25,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6b91ede2-0053-4bac-bd32-ab27ed627ce2" name="Changes" comment="14/04/2024">
-      <change afterPath="$PROJECT_DIR$/assets/icon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/icon.rc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Buttons/Blue_Buttons_Pixel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Buttons/Brown_Buttons_Pixel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Buttons/Gray_Buttons_Pixel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Buttons/Green_Buttons_Pixel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Buttons/Purple_Buttons_Pixel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Buttons/Red_Buttons_Pixel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Buttons/Yellow_Buttons_Pixel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Buttons/_READ ME!.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/playBullet.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audios/10s.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audios/3s.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audios/Defeat.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audios/FirstBlood.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audios/QuetSach1.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audios/QuetSach2.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audios/Victory.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/levels/2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/levels/3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/levels/4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/levels/5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/levels/6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/levels/7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/levels/8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/data/levels/9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Projectile.bk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/defeat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/victory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map2+4.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map3.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map5.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map6.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map7.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map8.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/map-tileset/map9.tmx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/maps/2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/maps/3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/maps/4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/maps/5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/maps/6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/maps/7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/maps/8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/maps/9.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/data/enemies.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/enemies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/data/levels.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/levels.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/data/levels/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/levels/1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-copy_resources-Debug-ac30727ffb461dab5cb6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/data/towers.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/data/towers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/map-tileset/project.tiled-session" beforeDir="false" afterPath="$PROJECT_DIR$/assets/map-tileset/project.tiled-session" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Game.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Game.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Leaderboard.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/LevelSelect.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Menu.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Menu.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Play.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/Play.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tower_defense.dir/src/main.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/enemies.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/enemies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/levels/1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/data/towers.json" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/data/towers.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/assets/map-tileset/project.tiled-session" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/assets/map-tileset/project.tiled-session" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/tower_defense.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tower_defense.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/vcpkg-manifest-install.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vcpkg-manifest-install.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/EnemyManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/EnemyManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LevelSelect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/LevelSelect.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Play.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Play.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Play.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Play.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tower.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tower.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TowerManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TowerManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/playEnemy.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/playEnemy.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/playBullet.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/playBullet.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/playTower.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/playTower.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +158,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/CLionProjects/tower-defense/assets/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ADMIN/CLionProjects/tower-defense/assets/maps&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -137,6 +171,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ADMIN\CLionProjects\tower-defense\assets\maps" />
       <recent name="C:\Users\ADMIN\CLionProjects\tower-defense\assets\images" />
       <recent name="C:\Users\ADMIN\CLionProjects\tower-defense\cmake-build-debug" />
       <recent name="C:\Users\ADMIN\CLionProjects\tower-defense" />
@@ -220,7 +255,14 @@
       <workItem from="1744184089498" duration="301000" />
       <workItem from="1744260148709" duration="76000" />
       <workItem from="1744566470919" duration="14685000" />
-      <workItem from="1744581871614" duration="4000" />
+      <workItem from="1744581871614" duration="41000" />
+      <workItem from="1744787260402" duration="8000" />
+      <workItem from="1744789300005" duration="216000" />
+      <workItem from="1744795773912" duration="5049000" />
+      <workItem from="1744807665063" duration="13876000" />
+      <workItem from="1744873178584" duration="3334000" />
+      <workItem from="1744910460335" duration="20839000" />
+      <workItem from="1744974502595" duration="7599000" />
     </task>
     <task id="LOCAL-00001" summary="19/02/2024">
       <option name="closed" value="true" />
@@ -350,7 +392,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744566496340</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="14/04/2024">
+      <option name="closed" value="true" />
+      <created>1744581886681</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1744581886681</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

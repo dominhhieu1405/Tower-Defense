@@ -36,10 +36,31 @@
             "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 02 - Projectile.png",
             "frame_width": 45,
             "frame_height": 40,
-            "frame_count": 6
+            "frame_count": 3
           },
           "weapon": {
             "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 02 - Weapon.png",
+            "frame_width": 576,
+            "frame_height": 96,
+            "frame_count": 6
+          },
+          "impact": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Weapon - Impact.png",
+            "frame_width": 384,
+            "frame_height": 64,
+            "frame_count": 6
+          }
+        },
+        {
+          "level": 3,
+          "projectile": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Projectile.png",
+            "frame_width": 66,
+            "frame_height": 40,
+            "frame_count": 3
+          },
+          "weapon": {
+            "path": "assets/images/Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Weapon.png",
             "frame_width": 576,
             "frame_height": 96,
             "frame_count": 6
@@ -93,9 +114,9 @@
           },
           "weapon": {
             "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Weapon.png",
-            "frame_width": 576,
-            "frame_height": 96,
-            "frame_count": 6
+            "frame_width": 1088,
+            "frame_height": 64,
+            "frame_count": 17
           },
           "impact": {
             "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 02 - Projectile - Impact.png",
@@ -116,7 +137,7 @@
             "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.png",
             "frame_width": 1280,
             "frame_height": 64,
-            "frame_count": 20
+            "frame_count": 19
           },
           "impact": {
             "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Projectile - Impact.png",
@@ -558,8 +579,8 @@
           },
           "weapon": {
             "path": "assets/images/Weapons/Tower 08/Spritesheets/Tower 08 - Level 03 - Weapon.png",
-            "frame_width": 480,
-            "frame_height": 48,
+            "frame_width": 640,
+            "frame_height": 64,
             "frame_count": 10
           },
           "impact": {

@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include <cstdlib>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
@@ -29,6 +30,8 @@ public:
     Mix_Music* bgm;
     GameState currentState;
     int selectedLevel = -1;
+    std::string dataPath = "assets/data/data.json";
+    std::string levelFile = "assets/data/levels.json";
 
     TowerManager towerManager;
     EnemyManager enemyManager;
@@ -39,14 +42,15 @@ public:
     void handleEvents();
     void update();
     void render();
+    void openURL(const std::string& url);
     void cleanup();
 
+    Play* play = nullptr;
+    Menu* menu = nullptr;
+    LevelSelect* levelSelect;
+    Leaderboard* leaderboard;
 private:
 
-    Menu* menu;
-    LevelSelect* levelSelect;
-    Play* play = nullptr;
-    Leaderboard* leaderboard;
 
     SDL_Window* window;
     SDL_Renderer* renderer = nullptr;
