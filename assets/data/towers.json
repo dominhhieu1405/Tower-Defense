@@ -135,7 +135,7 @@
           },
           "weapon": {
             "path": "assets/images/Weapons/Tower 02/Spritesheets/Tower 02 - Level 03 - Weapon.png",
-            "frame_width": 1280,
+            "frame_width": 1216,
             "frame_height": 64,
             "frame_count": 19
           },

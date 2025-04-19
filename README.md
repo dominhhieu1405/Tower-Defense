@@ -1,8 +1,7 @@
 [[English]](README_en.md)
 
 # Tower-Defense
-- Thử nghiệm game: [https://youtu.be/EyTwTOWr5zU](https://youtu.be/EziCb7U9UbU)
-- Phá đảo game: https://youtu.be/0RQHeCaz4sg
+- Phá đảo game: [https://youtu.be/1tulW5Rdnyk](https://youtu.be/1tulW5Rdnyk)
 ## Tài nguyên đã sử dụng
 - [Tower Pack](https://foozlecc.itch.io/)
 - [Tileset](https://foozlecc.itch.io/)

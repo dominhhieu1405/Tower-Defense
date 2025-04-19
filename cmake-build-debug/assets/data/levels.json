@@ -1,74 +1,74 @@
 [
-  {
-    "id": 1,
-    "name": "Level 1",
-    "unlocked": true,
-    "completed": false,
-    "score": 0,
-    "played": false
-  },
-  {
-    "id": 2,
-    "name": "Level 2",
-    "unlocked": false,
-    "completed": false,
-    "score": 0,
-    "played": false
-  },
-  {
-    "id": 3,
-    "name": "Level 3",
-    "unlocked": false,
-    "completed": false,
-    "score": 0,
-    "played": false
-  },
-  {
-    "id": 4,
-    "name": "Level 4",
-    "unlocked": false,
-    "completed": false,
-    "score": 0,
-    "played": false
-  },
-  {
-    "id": 5,
-    "name": "Level 5",
-    "unlocked": false,
-    "completed": false,
-    "score": 0,
-    "played": false
-  },
-  {
-    "id": 6,
-    "name": "Level 6",
-    "unlocked": false,
-    "completed": false,
-    "score": 0,
-    "played": false
-  },
-  {
-    "id": 7,
-    "name": "Level 7",
-    "unlocked": false,
-    "completed": false,
-    "score": 0,
-    "played": false
-  },
-  {
-    "id": 8,
-    "name": "Level 8",
-    "unlocked": false,
-    "completed": false,
-    "score": 0,
-    "played": false
-  },
-  {
-    "id": 9,
-    "name": "Level 9",
-    "unlocked": false,
-    "completed": false,
-    "score": 0,
-    "played": false
-  }
+    {
+        "completed": true,
+        "id": 1,
+        "name": "Level 1",
+        "played": true,
+        "score": 3,
+        "unlocked": true
+    },
+    {
+        "completed": true,
+        "id": 2,
+        "name": "Level 2",
+        "played": true,
+        "score": 3,
+        "unlocked": true
+    },
+    {
+        "completed": true,
+        "id": 3,
+        "name": "Level 3",
+        "played": true,
+        "score": 3,
+        "unlocked": true
+    },
+    {
+        "completed": true,
+        "id": 4,
+        "name": "Level 4",
+        "played": true,
+        "score": 3,
+        "unlocked": true
+    },
+    {
+        "completed": true,
+        "id": 5,
+        "name": "Level 5",
+        "played": true,
+        "score": 2,
+        "unlocked": true
+    },
+    {
+        "completed": true,
+        "id": 6,
+        "name": "Level 6",
+        "played": true,
+        "score": 3,
+        "unlocked": true
+    },
+    {
+        "completed": true,
+        "id": 7,
+        "name": "Level 7",
+        "played": true,
+        "score": 1,
+        "unlocked": true
+    },
+    {
+        "completed": true,
+        "id": 8,
+        "name": "Level 8",
+        "played": true,
+        "score": 3,
+        "unlocked": true
+    },
+    {
+        "completed": true,
+        "id": 9,
+        "name": "Level 9",
+        "played": true,
+        "score": 3,
+        "unlocked": true
+    }
 ]

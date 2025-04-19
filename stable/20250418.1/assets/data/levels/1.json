@@ -43,7 +43,7 @@
     },
     {
       "name": "Stage 2",
-      "time": 60,
+      "time": 50,
       "total": 10,
       "enemies": [
         { "id": 201, "enemy": 0, "level": 1, "time": 0, "path": 0, "rotation": 90 },

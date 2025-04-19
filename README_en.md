@@ -1,8 +1,7 @@
 [[Tiếng Việt]](README.md)
 
 # Tower Defense
-- Game Demo: [https://youtu.be/EyTwTOWr5zU](https://youtu.be/EziCb7U9UbU)
-- Game Walkthrough: [https://youtu.be/0RQHeCaz4sg](https://youtu.be/0RQHeCaz4sg)
+- Game Walkthrough: [https://youtu.be/1tulW5Rdnyk](https://youtu.be/1tulW5Rdnyk)
 
 ## Resources Used
 - [Tower Pack](https://foozlecc.itch.io/)
