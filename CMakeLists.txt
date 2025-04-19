@@ -41,10 +41,11 @@ file(GLOB SOURCES "src/*.cpp")
 # add_executable(tower_defense ${SOURCES} ${APP_ICON_RESOURCE_WINDOWS}) # Hiện cmd khi chạy
 add_executable(tower_defense WIN32 ${SOURCES} ${APP_ICON_RESOURCE_WINDOWS}) # Không hiện cmd khi chạy
 
-# Thêm thư viện JSON
+# Thêm thư viện , curl JSON
+find_package(CURL REQUIRED)
 find_package(nlohmann_json CONFIG REQUIRED)
 
-
+find_package(CURL REQUIRED)
 # Liên kết thư viện SDL2 và JSON
 target_link_libraries(tower_defense
         ${SDL2_LIB}
@@ -52,6 +53,7 @@ target_link_libraries(tower_defense
         ${SDL2_MIXER_LIB}
         ${SDL2_TTF_LIB}
         ${SDL2_IMAGE_LIB}
+        CURL::libcurl
         nlohmann_json::nlohmann_json
 )
 

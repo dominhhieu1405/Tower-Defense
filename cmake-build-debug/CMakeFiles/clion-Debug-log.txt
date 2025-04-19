@@ -3,7 +3,12 @@
 Detecting compiler hash for triplet x64-windows...
 Compiler found: E:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.43.34808/bin/Hostx64/x64/cl.exe
 All requested packages are currently installed.
-Total install time: 1.13 ms
+Total install time: 1.29 ms
+curl is compatible with built-in CMake targets:
+
+    find_package(CURL REQUIRED)
+    target_link_libraries(main PRIVATE CURL::libcurl)
+
 The package nlohmann-json provides CMake targets:
 
     find_package(nlohmann_json CONFIG REQUIRED)
@@ -18,6 +23,6 @@ For more information, see the docs here:
     https://json.nlohmann.me/api/macros/json_use_implicit_conversions/
 
 -- Running vcpkg install - done
--- Configuring done (4.2s)
--- Generating done (0.0s)
+-- Configuring done (12.3s)
+-- Generating done (0.1s)
 -- Build files have been written to: C:/Users/ADMIN/CLionProjects/tower-defense/cmake-build-debug

@@ -171,6 +171,9 @@ void Menu::handleEvents(SDL_Event& event) {
                     if (i == 1){
                         game->currentState = LEVEL_SELECT;
                     }
+                    if (i == 2){
+                        game->currentState = LEADERBOARD;
+                    }
                     if (i == 3) {
                         // Thoát game
                         SDL_Log("Exiting game...");

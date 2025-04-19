@@ -3,11 +3,13 @@
 #include "LevelSelect.h"
 #include "Play.h"
 #include "Leaderboard.h"
+#include "NameInput.h"
+#include "function.h"
 #include <cstdlib>
 
 
 
-Game::Game() : window(nullptr), renderer(nullptr), isRunning(true), currentState(MENU), menu(nullptr) {}
+Game::Game() : window(nullptr), renderer(nullptr), isRunning(true), currentState(MENU), menu(nullptr), nameInput(nullptr) {}
 
 Game::~Game() {
     delete menu;
@@ -15,6 +17,42 @@ Game::~Game() {
 }
 
 bool Game::init(const char* title, int width, int height) {
+    dataFolder = getUserDataPath();
+    if (dataFolder.empty()) {
+        SDL_Log("Failed to get user data path");
+        return false;
+    } else {
+        dataPath = dataFolder + "data.json";
+        levelFile = dataFolder + "levels.json";
+        if (!fileExists(dataPath)){
+            std::ifstream file("assets/data/data.json");
+            nlohmann::json jsonData;
+            file >> jsonData;
+            file.close();
+            std::ofstream outFile(dataPath);
+            outFile << jsonData.dump(4); // Ghi dữ liệu vào file
+            outFile.close();
+        }
+        if (!fileExists(levelFile)){
+            std::ifstream file("assets/data/levels.new.json");
+            nlohmann::json jsonData;
+            file >> jsonData;
+            file.close();
+            std::ofstream outFile(levelFile);
+            outFile << jsonData.dump(4); // Ghi dữ liệu vào file
+            outFile.close();
+        }
+    }
+    std::ifstream inFile(dataPath);
+    nlohmann::json userData;
+    inFile >> userData;
+    inFile.close();
+    if (userData["name"].get<std::string>().empty()) {
+        currentState = NAME_INPUT;
+    }
+
+
+
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
         SDL_Log("SDL could not initialize! SDL_Error: %s", SDL_GetError());
         return false;
@@ -74,6 +112,7 @@ bool Game::init(const char* title, int width, int height) {
 
     menu = new Menu(renderer, &isRunning, this);
     levelSelect = new LevelSelect(renderer, &isRunning, this);
+    //leaderboard = new Leaderboard(renderer, &isRunning, this);
 
 
     return true;
@@ -96,6 +135,10 @@ void Game::run() {
                 levelSelect->handleEvents(event);
             } else if (currentState == PLAY) {
                 play->handleEvent(event);
+            }else if (currentState == NAME_INPUT && nameInput != nullptr) {
+                nameInput->handleEvent(event);
+            } else if (currentState == LEADERBOARD) {
+                leaderboard->handleEvents(event);
             }
             render();
         }
@@ -174,9 +217,18 @@ void Game::render() {
         }
         play->render();
     } else if (currentState == LEADERBOARD) {
-        Leaderboard leaderboard(renderer);
-        leaderboard.render();
+        if (leaderboard == nullptr) {
+            leaderboard = new Leaderboard(renderer, &isRunning, this);
+        }
+        leaderboard->render();
+    } else if (currentState == NAME_INPUT) {
+        if (nameInput == nullptr) {
+            nameInput = new NameInput(renderer, &isRunning, this, dataPath);
+        }
+        SDL_StartTextInput();
+        nameInput->render();
     }
+
 
     SDL_RenderPresent(renderer);
 }

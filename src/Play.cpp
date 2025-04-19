@@ -6,6 +6,7 @@
 #include "playBullet.h"
 #include <fstream>
 #include <nlohmann/json.hpp>
+#include <curl/curl.h>
 #include <cmath>
 
 Play::Play(SDL_Renderer* renderer, bool* isRunning, Game* game)
@@ -187,6 +188,7 @@ void Play::handleEvent(SDL_Event& event) {
                         playing = false;
                         stopTick = SDL_GetTicks();
                         SDL_Log("Tạm dừng game: %d", stopTick);
+                        Mix_VolumeMusic(MIX_MAX_VOLUME);
                     }
 
                     /**
@@ -251,6 +253,8 @@ void Play::handleEvent(SDL_Event& event) {
                             playing = true;
                             hoverButton = 1;
 
+                            Mix_VolumeMusic(30);
+
                         } else if (clickX >= (1280 - 240)/2 && clickX <= (1280 + 240)/2 &&
                                    clickY >= 390 && clickY <= 470) { // Chơi lại màn
                             Mix_PlayChannel(-1, clickSound, 0);
@@ -275,6 +279,7 @@ void Play::handleEvent(SDL_Event& event) {
                             money = 500;
 
                             SDL_Log("Chơi lại màn chơi!");
+                            Mix_VolumeMusic(30);
 
 
                         } else if (clickX >= (1280 - 160)/2 && clickX <= (1280 + 160)/2 &&
@@ -286,8 +291,10 @@ void Play::handleEvent(SDL_Event& event) {
                             game->menu = nullptr; // Giải phóng bộ nhớ
                             game->selectedLevel = -1;
                             game->currentState = MENU;
+                            Mix_VolumeMusic(MIX_MAX_VOLUME);
                         }
                     } else {
+                        Mix_VolumeMusic(MIX_MAX_VOLUME);
 
                         if (clickX >= 480 && clickX <= 544 &&
                             clickY >= 576 && clickY <= 640) {
@@ -326,6 +333,7 @@ void Play::handleEvent(SDL_Event& event) {
                             money = 500;
 
                             SDL_Log("Chơi lại màn chơi!");
+                            Mix_VolumeMusic(30);
 
 
                         } else if (clickX >= 736 && clickX <= 800 &&
@@ -546,6 +554,53 @@ void Play::updateScore() {
     outFile.close();
     (game->levelSelect)->loadLevels(game->levelFile.c_str());
     SDL_Log("Đã cập nhật điểm số: %d", score);
+
+    // Đọc dữ liệu người chơi từ file game->dataPath
+    std::ifstream inFile(game->dataPath);
+    nlohmann::json data;
+    inFile >> data;
+    inFile.close();
+
+    std::string uuid = data["uuid"].get<std::string>();  // Lấy uuid từ file JSON
+
+    // Kiểm tra nếu uuid không rỗng, mới gửi yêu cầu cập nhật
+    if (!uuid.empty()) {
+        // Gửi dữ liệu đến API để cập nhật thông tin người chơi
+        CURL* curl = curl_easy_init();
+        if (curl) {
+            CURLcode res;
+
+            std::string url = "https://towerdefense.bk25nkc.com/api/update.php";
+            int level = game->selectedLevel;
+            int level_lives = lives;
+            int level_ticks = SDL_GetTicks() - startTick;
+            int level_money = money;
+
+            std::string postData = "uuid=" + uuid + "&level=" + std::to_string(level) +
+                                   "&level_lives=" + std::to_string(level_lives) +
+                                   "&level_ticks=" + std::to_string(level_ticks) +
+                                   "&level_money=" + std::to_string(level_money);
+
+            SDL_Log("Sending update request: %s", postData.c_str());
+
+            curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+            curl_easy_setopt(curl, CURLOPT_POSTFIELDS, postData.c_str());
+
+            // Không cần callback, bỏ qua việc nhận phản hồi
+            res = curl_easy_perform(curl);
+            if (res != CURLE_OK) {
+                SDL_Log("curl_easy_perform() failed: %s", curl_easy_strerror(res));
+            } else {
+                SDL_Log("Update request sent successfully.");
+            }
+
+            curl_easy_cleanup(curl);
+        } else {
+            SDL_Log("Failed to initialize CURL.");
+        }
+    } else {
+        SDL_Log("UUID is empty, not sending update request.");
+    }
 }
 
 

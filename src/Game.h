@@ -8,6 +8,7 @@
 #include <SDL2/SDL_mixer.h>
 #include "TowerManager.h"
 #include "EnemyManager.h"
+#include "NameInput.h"
 
 
 class Menu;
@@ -19,7 +20,8 @@ enum GameState {
     MENU,
     LEVEL_SELECT,
     PLAY,
-    LEADERBOARD
+    LEADERBOARD,
+    NAME_INPUT
 };
 
 class Game {
@@ -30,6 +32,7 @@ public:
     Mix_Music* bgm;
     GameState currentState;
     int selectedLevel = -1;
+    std::string dataFolder = "assets/data/";
     std::string dataPath = "assets/data/data.json";
     std::string levelFile = "assets/data/levels.json";
 
@@ -48,7 +51,8 @@ public:
     Play* play = nullptr;
     Menu* menu = nullptr;
     LevelSelect* levelSelect;
-    Leaderboard* leaderboard;
+    Leaderboard* leaderboard = nullptr;
+    NameInput* nameInput;
 private:
 
 

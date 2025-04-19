@@ -13,6 +13,8 @@
 - [Star icon](https://pix3lcat.itch.io/star-collectibles)
 - [Thud Sound Effect](https://mixkit.co/free-sound-effects/thud/)
 - [Buttons Pack](https://slyfox-studios.itch.io/buttons-pack)
+- [Keyboard Sound Effect](https://pixabay.com/vi/sound-effects/keyboard-click-327728/)
+- [Wooden Board](https://pngtree.com/freepng/natural-wooden-board_6967761.html)
 ## Các phần mềm đã sử dụng
 - [CLion](https://www.jetbrains.com/clion/): IDE C++
 - [Tilemap Editor](https://www.mapeditor.org/): Tạo bản đồ cho game
@@ -41,7 +43,8 @@ Với đồ họa pixel đơn giản nhưng bắt mắt, hệ thống tháp và 
   * [Các loại tháp](#các-loại-tháp)
   * [Các loại kẻ địch](#các-loại-kẻ-địch)
 * [5. Chiến thắng và thất bại](#5-chiến-thắng-và-thất-bại)
-* [6. Về mã nguồn game:](#6-về-mã-nguồn-game)
+* [6. Bảng xếp hạng](#6-bảng-xếp-hạng)
+* [7. Về mã nguồn game:](#7-về-mã-nguồn-game)
 <!-- TOC -->
 
 # 0. Cách tải game
@@ -83,7 +86,14 @@ Bỏ dấu # ở dòng đầu tiên và thêm dấu # vào dòng thứ 2.<br/>
 
 # 1. Bắt đầu game
 
-Khi mờ game sẽ thấy hiện ra giao diện
+Khi mờ game sẽ thấy hiện ra giao diện nhập tên. 
+<div style="text-align: center;">
+
+![Giao diện chính](preview/input.png)
+
+</div>
+
+Sau khi nhập tên và nhấn enter, chúng ta sẽ vào giao diện chính của game
 
 <div style="text-align: center;">
 
@@ -94,7 +104,7 @@ Khi mờ game sẽ thấy hiện ra giao diện
 Giao diện chính của gane gồm 4 nút:
 - **CHƠI TIẾP:** Bắt đầu màn cuối cùng đã chơi (Nếu có)
 - **BẢN ĐỒ:** Hiển thị danh sách các level trong game
-- **XẾP HẠNG:** Hiển thị bảng xếp hạng của tất cả người chơi (Đang cập nhật)
+- **XẾP HẠNG:** Hiển thị bảng xếp hạng của tất cả người chơi
 - **THOÁT:** Thoát game
 
 # 2. Chọn level
@@ -156,7 +166,7 @@ Bạn kéo thả thap vào ô cần đặt. Nếu không đủ tiền mua hoặc
 
 Sau khi đặt tháp sẽ hiển thị trên bản đồ.
 <div style="text-align: center;">
-
+ 
 ![image](preview/tower.png)
 </div>
 Khi bạn nhấn vào tháp, sẽ hiện ra vòng tròn màu xanh, các vị trí trong vòng tròn này là các vị trí mà tháp có thể bắn được. Tháp sẽ tự động bắn vào kẻ địch trong vòng tròn này.<br/>
@@ -190,16 +200,16 @@ Có 8 loại tháp, mỗi loại tháp có 3 level. Khi mua thì tháp sẽ là 
 
 - Có 8 loại kẻ địch, mỗi loại có 3 level.
 
-|         Ảnh         | Tên            |       Máu       |      Tốc chạy      |  Phần thưởng  |
-|:-------------------:|:---------------|:---------------:|:------------------:|:-------------:|
-| ![](preview/e1.png) | Giáp Kẹp Trùng | 120 / 180 / 240 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
-| ![](preview/e2.png) | Tiểu Cường     | 150 / 225 / 300 | 0.75 → 0.75 → 0.75 | 25 → 75 → 150 |
-| ![](preview/e3.png) | Hỏa Phong      | 130 / 195 / 260 |  0.9 → 0.9 → 0.9   | 25 → 75 → 150 |
-| ![](preview/e4.png) | Phi Hoàng      | 120 / 180 / 240 |     1 → 1 → 1      | 25 → 75 → 150 |
-| ![](preview/e5.png) | Diệp Trùng     | 110 / 165 / 220 |  0.5 → 0.6 → 0.6   | 25 → 75 → 150 |
-| ![](preview/e6.png) | Nham Tước      | 160 / 240 / 320 | 0.4 → 0.55 → 0.55  | 25 → 75 → 150 |
-| ![](preview/e7.png) | Thiết Long     | 180 / 240 / 360 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
-| ![](preview/e8.png) | Hư Điệp        | 100 / 200 / 300 |  1.1 → 1.1 → 1.1   | 25 → 75 → 150 |
+|         Ảnh          | Tên            |       Máu       |      Tốc chạy      |  Phần thưởng  |
+|:--------------------:|:---------------|:---------------:|:------------------:|:-------------:|
+| ![](preview/e1.gif)  | Giáp Kẹp Trùng | 120 / 180 / 240 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
+| ![](preview/e2.gif)  | Tiểu Cường     | 150 / 225 / 300 | 0.75 → 0.75 → 0.75 | 25 → 75 → 150 |
+| ![](preview/e3.gif)  | Hỏa Phong      | 130 / 195 / 260 |  0.9 → 0.9 → 0.9   | 25 → 75 → 150 |
+| ![](preview/e4.gif)  | Phi Hoàng      | 120 / 180 / 240 |     1 → 1 → 1      | 25 → 75 → 150 |
+| ![](preview/e5.gif)  | Diệp Trùng     | 110 / 165 / 220 |  0.5 → 0.6 → 0.6   | 25 → 75 → 150 |
+| ![](preview/e6.gif)  | Nham Tước      | 160 / 240 / 320 | 0.4 → 0.55 → 0.55  | 25 → 75 → 150 |
+| ![](preview/e7.gif)  | Thiết Long     | 180 / 240 / 360 | 0.6 → 0.75 → 0.75  | 25 → 75 → 150 |
+| ![](preview/e8.gif)  | Hư Điệp        | 100 / 200 / 300 |  1.1 → 1.1 → 1.1   | 25 → 75 → 150 |
 
 # 5. Chiến thắng và thất bại
 
@@ -217,9 +227,17 @@ Có 8 loại tháp, mỗi loại tháp có 3 level. Khi mua thì tháp sẽ là 
 ![image](preview/lose.png)
 </div>
 
+# 6. Bảng xếp hạng
+
+- Nhằm tăng tính cạnh tranh trong trò chơi, có thêm tính năng bảng xếp hạng trong game. Dữ liệu được cập nhật thời gian thực và đồng bộ với tất cả người chơi.
+- Xếp hạng được tính theo level cao nhất đã vượt -> số mạng cao nhất còn lại -> Thời gian vượt level
+
+
+![image](preview/leaderboard.png)
+
 ---
 
-# 6. Về mã nguồn game:
+# 7. Về mã nguồn game:
 Ngoài các file/folder được liệt kê dưới đây, các file khác đều là các file tự động sinh ra khi biên dịch game. Chúng ta không cần quan tâm đến các file này.<br/>
 
 - Folder SDL2: Chứa các thư viện SDL2
@@ -246,7 +264,7 @@ Ngoài các file/folder được liệt kê dưới đây, các file khác đề
     - Enemy: Chứa struct của các kẻ địch
     - EnemyManager: Chứa class quản lý các kẻ địch
     - Game: Chứa render và xử lý sự kiện khi class chạy game
-    - Leaderboard: Chứa class render và xử lý sự kiện khi quản lý bảng xếp hạng (Đang cập nhật)
+    - Leaderboard: Chứa class render và xử lý sự kiện khi quản lý bảng xếp hạng
     - LevelSelect: Chứa class render và xử lý sự kiện khi chọn level
     - Menu: Chứa class render và xử lý sự kiện khi menu chính
     - Play: Chứa class render và xử lý sự kiện khi chơi game
